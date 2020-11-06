@@ -1,0 +1,91 @@
+header {
+    .icon-border {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $primary-color;
+        border-radius: 50%;
+        &:before {
+            font-size: 30px;
+            color: $primary-color;
+        }
+    }
+    .icon-email {
+        font-size: 20px;
+    }
+    .contact {
+        margin-bottom: 0;
+        li {
+            list-style-type: none;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            &:last-child {
+                padding-bottom: 0;
+            }
+            i {
+                padding-right: 10px;
+                color: #661d17;
+                font-size: 20px;
+            }
+        }
+    }
+    .header-menu {
+        background-color: #661d17;
+        .navbar-light {
+            padding: 0;
+            .navbar-nav {
+                .nav-item {
+                    padding: 0.5rem 20px;
+                }
+                .nav-link {
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    font-family: "Oswald-Bold";
+                }
+            }
+        }
+        .dropdown-menu {
+            width: 600px;
+            .dropdown-item {
+                display: inline-block;
+                padding: 7px 25px;
+                width: unset;
+            }
+        }
+    }
+    .m-header-top {
+        background-color: #661d17;
+        color: #ffffff;
+        i:before {
+            color: $primary-color;
+        }
+    }
+    .m-header-menu {
+        position: relative;
+        background-color: #ffffff;
+        .navbar-toggler {
+            border: 0;
+            padding-right: 0;
+            outline: 0;
+        }
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 5;
+            background-color: #661d17;
+            .navbar-nav {
+                * {
+                    color: #ffffff;
+                }
+                .active .nav-link {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

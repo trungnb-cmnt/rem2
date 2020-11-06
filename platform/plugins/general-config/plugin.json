@@ -1,0 +1,9 @@
+{
+    "name": "GeneralConfig",
+    "namespace": "Botble\\GeneralConfig\\",
+    "provider": "Botble\\GeneralConfig\\Providers\\GeneralConfigServiceProvider",
+    "author": "Tuan Nguyen",
+    "url": "https://comartek.com",
+    "version": "1.0",
+    "description": "The description for plugin general_config"
+}

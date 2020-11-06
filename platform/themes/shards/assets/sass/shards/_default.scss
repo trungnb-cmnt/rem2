@@ -1,0 +1,59 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    body {
+        font-family: "Lato", "HelveticaNeue";
+        font-size: 0.95rem;
+    }
+}
+
+a {
+    color: inherit;
+    &:hover {
+        text-decoration: none;
+        color: $name-hover;
+    }
+}
+
+.cl-default {
+    color: $primary-color;
+}
+
+img {
+    max-width: 100%;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-19 {
+    font-size: 19px;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+.py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.py-70 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.title {
+    color: #661d17;
+    font-weight: bold;
+}
+
+.flex-none {
+    flex: none;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}

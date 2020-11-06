@@ -1,0 +1,14 @@
+@import "page/home";
+@import "page/blog_category";
+@import "page/blog_post";
+
+.page-section {
+  padding: 55px 0;
+  background-color: $background-content;
+  .page-sidebar {
+    order: 1;
+    @include responsive(lg) {
+      order: 0;
+    }
+  }
+}

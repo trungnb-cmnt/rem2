@@ -1,0 +1,14 @@
+.hero-area {
+  height: calc(100vh - 90px);
+  * {
+    height: 100%;
+  }
+  .owl-item {
+    .item {
+      min-height: 350px;
+      background: no-repeat center top;
+      background-size: cover;
+      background-color: #142E11;
+    }
+  }
+}

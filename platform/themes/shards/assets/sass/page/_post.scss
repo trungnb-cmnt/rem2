@@ -1,0 +1,51 @@
+.all-post {
+    .bd-item {
+        border-bottom: 1px solid #707070;
+    }
+    .post-items {
+        .post-title {
+            font-size: 16px;
+            font-family: "Oswald-Bold";
+        }
+        .post-des {
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+        a {
+            color: #000000;
+            text-decoration: none;
+            &:hover {
+                color: #72bf44;
+                i::before {
+                    color: #72bf44;
+                }
+            }
+        }
+    }
+}
+
+.page-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .pagination {
+        .page-item {
+            box-shadow: none;
+            margin: 0 5px;
+        }
+        .page-item.active {
+            .page-link {
+                background-color: #72bf44;
+                color: #ffffff;
+            }
+        }
+        .page-link {
+            border-radius: 3px;
+            padding: 0.3rem 0.6rem;
+            color: #72bf44;
+        }
+    }
+}

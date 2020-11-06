@@ -1,0 +1,14 @@
+{
+    "name": "Comartek",
+    "description": "This is a basic theme",
+    "author": "Tuan Nguyen",
+    "version": "1.0",
+    "required_plugins": [
+        "blog",
+        "contact",
+        "gallery",
+        "language",
+        "block",
+        "member"
+    ]
+}

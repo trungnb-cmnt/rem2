@@ -1,0 +1,16 @@
+footer {
+  height: $footer-height;
+  box-shadow: 0 0 1px #dedede;
+  .copyright {
+    color: #adadad;
+    font-weight: 500;
+  }
+}
+
+.homepage {
+  footer {
+    position: absolute;
+    bottom: -$footer-height;
+    width: 100%;
+  }
+}

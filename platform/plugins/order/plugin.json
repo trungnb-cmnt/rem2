@@ -1,0 +1,9 @@
+{
+    "name": "Order",
+    "namespace": "Botble\\Order\\",
+    "provider": "Botble\\Order\\Providers\\OrderServiceProvider",
+    "author": "Tuan Nguyen",
+    "url": "https://comartek.com",
+    "version": "1.0",
+    "description": "The description for plugin order"
+}

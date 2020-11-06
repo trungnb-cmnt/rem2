@@ -1,0 +1,24 @@
+.blog-category {
+  .meta {
+    color: #999;
+    font-weight: bold;
+    a {
+      color: #999;
+    }
+  }
+  .title {
+    a {
+      color: #101010;
+    }
+  }
+  #load-more {
+    border-radius: 40px;
+    padding: 7px 20px;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: #fff;
+    &:hover {
+      background-color: #c82333;
+    }
+  }
+}

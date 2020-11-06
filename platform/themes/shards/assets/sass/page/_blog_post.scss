@@ -1,0 +1,61 @@
+.blog-post {
+    .sidebar {
+        .des-sidebar {
+            color: #000000;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+        }
+        h3 {
+            font-size: 16px;
+            font-family: "Oswald-Medium";
+            color: #000000;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            &:hover {
+                color: #72bf44;
+            }
+        }
+    }
+    h1 {
+        font-size: 24px;
+        font-family: "Oswald-Bold";
+    }
+    h2 {
+        color: #72bf44;
+        font-family: "Oswald-Medium";
+        font-size: 24px;
+    }
+    .date-post {
+        font-size: 14px;
+        color: #5e5e5e;
+    }
+    .LeftSocial {
+        li {
+            list-style: none;
+            i {
+                font-size: 28px;
+            }
+            .icon-facebook-rectangle {
+                &::before {
+                    color: #1877f2;
+                }
+            }
+            .icon-twitter-rectangle {
+                &::before {
+                    color: #1da1f2;
+                }
+            }
+            .icon-pinterest-rectangle {
+                &::before {
+                    color: #bd081c;
+                }
+            }
+        }
+    }
+}

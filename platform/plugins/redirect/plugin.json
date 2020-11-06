@@ -1,0 +1,9 @@
+{
+    "name": "Redirect",
+    "namespace": "Botble\\Redirect\\",
+    "provider": "Botble\\Redirect\\Providers\\RedirectServiceProvider",
+    "author": "Tuan Nguyen",
+    "url": "",
+    "version": "1.0",
+    "description": "Redirect Url Management"
+}

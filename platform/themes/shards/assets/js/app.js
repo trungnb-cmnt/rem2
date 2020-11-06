@@ -1,0 +1,15 @@
+import 'bootstrap';
+import './shards.min';
+//import './language-public';
+import './slider';
+import './jquery.scrollAnimations';
+import 'jquery-lazyload';
+import './directive';
+import 'slick-carousel';
+import './custom';
+import './order';
+import './jquery.ez-plus';
+import './zoom';
+import './image-zoom';
+// import * as AOS from 'aos';
+// AOS.init();

@@ -1,0 +1,81 @@
+footer {
+    color: #ffffff;
+    background-color: $bg-footer;
+    p {
+        color: #ffffff;
+    }
+    h3 {
+        font-family: "Lato-Bold", Roboto, sans-serif;
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    .popular-categories {
+        a {
+            color: #ffffff;
+            &:hover {
+                color: $name_hover;
+            }
+        }
+    }
+    .hr {
+        border-bottom: 1px solid #4a4a4a;
+    }
+    .contact-us {
+        p {
+            margin-bottom: 0.4rem;
+            line-height: 1.9rem;
+        }
+        .contact-info {
+            font-family: "Lato-Bold", Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+    .popular-news {
+        .popular-categories {
+            height: 80%;
+        }
+    }
+    .footer-title {
+        font-weight: bold;
+    }
+    .contact {
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        li {
+            display: block;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            a {
+                color: $primary-color;
+                font-weight: bold;
+                font-size: 14px;
+                letter-spacing: 1.5px;
+                &:hover {
+                    color: $name_hover;
+                }
+            }
+            i {
+                padding-right: 6px;
+                &:before {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    ul {
+        padding-left: 0;
+        li {
+            list-style: none;
+            padding-bottom: 5px;
+        }
+    }
+    .copyright {
+        background-color: #661d17;
+    }
+}

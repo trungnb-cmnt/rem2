@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.ttf?a497cb") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-3color .path1:before {
+    content: "\e917";
+    color: rgb(255, 147, 20);
+}
+
+.icon-icon-3color .path2:before {
+    content: "\e918";
+    margin-left: -2.5em;
+    color: rgb(102, 29, 23);
+}
+
+.icon-icon-3color .path3:before {
+    content: "\e919";
+    margin-left: -2.5em;
+    color: rgb(147, 78, 10);
+}
+
+.icon-recycle-sign:before {
+    content: "\e902";
+}
+
+.icon-user-shape:before {
+    content: "\e903";
+}
+
+.icon-youtube:before {
+    content: "\e904";
+}
+
+.icon-phone:before {
+    content: "\e905";
+}
+
+.icon-maps:before {
+    content: "\e906";
+}
+
+.icon-email:before {
+    content: "\e907";
+}
+
+.icon-insta:before {
+    content: "\e908";
+}
+
+.icon-zoo .path1:before {
+    content: "\e909";
+    color: rgb(0, 0, 0);
+}
+
+.icon-zoo .path2:before {
+    content: "\e90a";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-prev:before {
+    content: "\e90b";
+}
+
+.icon-next:before {
+    content: "\e90c";
+}
+
+.icon-medal .path1:before {
+    content: "\e90d";
+    color: rgb(0, 0, 0);
+}
+
+.icon-medal .path2:before {
+    content: "\e90e";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.icon-medal .path3:before {
+    content: "\e90f";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.icon-medal .path4:before {
+    content: "\e910";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-medal .path5:before {
+    content: "\e911";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.icon-price-tag .path1:before {
+    content: "\e912";
+    color: rgb(0, 0, 0);
+}
+
+.icon-price-tag .path2:before {
+    content: "\e913";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-price-tag .path3:before {
+    content: "\e914";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.icon-price-tag .path4:before {
+    content: "\e915";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-price-tag .path5:before {
+    content: "\e916";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+
+.icon-fb:before {
+    content: "\e900";
+    color: #ababab;
+}
+
+.icon-home:before {
+    content: "\e901";
+}

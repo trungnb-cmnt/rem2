@@ -1,0 +1,9 @@
+{
+    "name": "Catalog",
+    "namespace": "Botble\\Catalog\\",
+    "provider": "Botble\\Catalog\\Providers\\CatalogServiceProvider",
+    "author": "Tuan Nguyen",
+    "url": "https://comartek.com",
+    "version": "1.0",
+    "description": "Manage products, categories"
+}

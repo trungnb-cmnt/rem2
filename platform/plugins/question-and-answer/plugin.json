@@ -1,0 +1,9 @@
+{
+    "name": "Question And Answer",
+    "namespace": "Botble\\QuestionAndAnswer\\",
+    "provider": "Botble\\QuestionAndAnswer\\Providers\\QuestionAndAnswerServiceProvider",
+    "author": "Tuan Nguyen",
+    "url": "",
+    "version": "1.0",
+    "description": "Question and Answer"
+}
