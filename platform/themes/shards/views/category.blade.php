@@ -21,42 +21,34 @@
             </div>
             <div class="col-12">
                 <div class="row">
-                    <div class="col-2 d-none d-lg-block">
+                    <div class="d-none d-lg-block">
                         {!! Theme::partial('sidebar') !!}
                     </div>
-                    <div class="col-12 col-lg-10 ">
+                    <div class="col">
                         <div class="row">
                             @foreach($products as $key => $product)
-                            <div class="col-sm-6 col-md-4">
+                            <div class="col-sm-6 col-md-3 mb-4">
                                 <div class="Product-Item">
-                                    <div class="p-3 text-center img-Item">
-                                        <div class="image large-image">
+                                    <div class="text-center img-Item mb-3">
+                                        <div class="image medium-image">
                                             <a href="{{ url($product->slug) }}">
-                                                <?php if (!empty($product->image_demo)) : ?>
                                                 <img class="image-product"
-                                                    src="{{ !empty($product->image) ? get_object_image($product->image, 'large3') : '' }}"
+                                                    src="{{ !empty($product->image) ? get_object_image($product->image, 'medium') : '' }}"
                                                     alt="{{ $product->name }}">
-                                                <img class="image-demo"
-                                                    src="{{ !empty($product->image_demo) ? get_object_image($product->image_demo, 'large3') : '' }}"
-                                                    alt="{{ $product->name }}">
-                                                <?php else : ?>
-                                                <img src="{{ !empty($product->image) ? get_object_image($product->image, 'large3') : '' }}"
-                                                    alt="{{ $product->name }}">
-                                                <?php endif; ?>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="DesProHome">
                                         <a href="{{ url($product->slug) }}">
-                                            <p class="NameProHome text-center">{{ $product->name }}</p>
+                                            <p class="NameProHome text-center mb-0">{{ $product->name }}</p>
                                         </a>
                                         <hr>
                                         <div class="PriceProHome">
                                             <?php if ($product->discount_price) : ?>
-                                            <span class="font-18">$ {{ ($product->discount_price) }}</span>
-                                            <del class="font-14"> $ {{ $product->price }}</del>
+                                            <span class="font-18">{{ number_format($product->discount_price,0,',','.') }} VND</span>
+                                            <del class="font-14">{{ number_format($product->price,0,',','.') }} VND</del>
                                             <?php else : ?>
-                                            <span class="font-18">$ {{ ($product->price) }}</span>
+                                            <span class="font-18">{{ number_format($product->price,0,',','.') }} VND</span>
                                             <?php endif ?>
                                         </div>
                                     </div>

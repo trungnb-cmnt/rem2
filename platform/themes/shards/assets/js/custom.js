@@ -321,12 +321,11 @@ $(document).ready(function() {
         "[data-animation]:not([data-animation-child]), [data-animation-container]"
     );
     $containers.scrollAnimations();
-
 });
 $(document).ready(function() {
-    $('#imageZoom').imageZoom({ zoom: 200 });
+    $("#imageZoom").imageZoom({ zoom: 200 });
 
-    $('.btn-submit').on('click', function() {
+    $(".btn-submit").on("click", function() {
         var elements = document.getElementsByClassName("inputValidate");
         for (var i = 0; i < elements.length; i++) {
             elements[i].oninvalid = function(e) {
@@ -340,14 +339,12 @@ $(document).ready(function() {
             };
         }
 
-
         $("input[name=txtPhone]")[0].oninvalid = function() {
             this.setCustomValidity("This field must be a number");
         };
-    })
+    });
 
-
-    $('.modal-gallery-product-top').slick({
+    $(".modal-gallery-product-top").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
@@ -378,10 +375,8 @@ $(document).ready(function() {
                     "<span class='icon-previous-product'></span>",
                     "<span class='icon-next-product'></span>"
                 ]
-            },
-
-        },
-
+            }
+        }
     });
 
     function syncPosition(el) {
@@ -390,9 +385,9 @@ $(document).ready(function() {
             .find(".owl-item")
             .removeClass("synced")
             .eq(current)
-            .addClass("synced")
+            .addClass("synced");
         if ($(".modal-gallery-product").data("owlCarousel") !== undefined) {
-            center(current)
+            center(current);
         }
     }
 
@@ -414,7 +409,7 @@ $(document).ready(function() {
 
         if (found === false) {
             if (num > sync2visible[sync2visible.length - 1]) {
-                sync2.trigger("owl.goTo", num - sync2visible.length + 2)
+                sync2.trigger("owl.goTo", num - sync2visible.length + 2);
             } else {
                 if (num - 1 === -1) {
                     num = 0;
@@ -422,11 +417,9 @@ $(document).ready(function() {
                 sync2.trigger("owl.goTo", num);
             }
         } else if (num === sync2visible[sync2visible.length - 1]) {
-            sync2.trigger("owl.goTo", sync2visible[1])
+            sync2.trigger("owl.goTo", sync2visible[1]);
         } else if (num === sync2visible[0]) {
-            sync2.trigger("owl.goTo", num - 1)
+            sync2.trigger("owl.goTo", num - 1);
         }
-
     }
-
 });

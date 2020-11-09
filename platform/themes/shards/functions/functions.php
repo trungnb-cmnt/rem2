@@ -56,6 +56,55 @@ theme_option()
         ],
     ])
     ->setSection([
+        'title' => __('Mạng xã hội'),
+        'desc' => __('Mạng xã hội'),
+        'id' => 'socal_network',
+        'subsection' => true,
+        'icon' => 'fa fa-image',
+    ])
+     ->setField([
+        'id' => 'facebook',
+        'section_id' => 'socal_network',
+        'type' => 'text', // text, password, email, number
+        'label' => __('Facebook'),
+        'attributes' => [
+            'name' => 'facebook',
+            'value' => null,
+            'options' => [
+                'class' => 'form-control',
+                'placeholder' => __('Enter link facebook'),
+            ]
+        ],
+    ])
+     ->setField([
+        'id' => 'zalo',
+        'section_id' => 'socal_network',
+        'type' => 'text', // text, password, email, number
+        'label' => __('Zalo'),
+        'attributes' => [
+            'name' => 'zalo',
+            'value' => null,
+            'options' => [
+                'class' => 'form-control',
+                'placeholder' => __('Enter link zalo'),
+            ]
+        ],
+    ])
+     ->setField([
+        'id' => 'instagram',
+        'section_id' => 'socal_network',
+        'type' => 'text', // text, password, email, number
+        'label' => __('Instagram'),
+        'attributes' => [
+            'name' => 'instagram',
+            'value' => null,
+            'options' => [
+                'class' => 'form-control',
+                'placeholder' => __('Enter link instagram'),
+            ]
+        ],
+    ])
+    ->setSection([
         'title' => __('Banner of pages'),
         'desc' => __('Banner của các trang'),
         'id' => 'banner_of_page',

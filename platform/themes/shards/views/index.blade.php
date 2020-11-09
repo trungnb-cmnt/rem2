@@ -1,3 +1,6 @@
+<?php 
+    $featureCategories = get_featured_catalog_categories(6);
+?>
 <section>
     <div id="banner" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -27,10 +30,10 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-2 py-50 d-none d-lg-block">
+            <div class="py-50 d-none d-lg-block">
                 {!! Theme::partial('sidebar') !!}
             </div>
-            <div class="col-12 col-lg-10 py-50 content">
+            <div class="col py-50 content">
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-center">
                         <h2 class="mb-3">Sản phẩm của chúng tôi</h2>
@@ -44,135 +47,31 @@
                                     class="path2"></span><span class="path3"></span></span></div>
                     </div>
                     <div class="col-12 py-4">
-                        <div class="row list-product">
-                            <div class="col-12 pb-4">
-                                <div class="title-cate">
-                                    <span class="bg-category">Rèm vãi <span class="fa fa-forward"></span></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
+                        <?php  if(!empty($featureCategories)): ?>
+                            @foreach ($featureCategories as $featureCategories)
+                                 <?php $productsByCateId = get_products_by_category($featureCategories->id,0,4); ?>
+                                <?php if(!empty($productsByCateId)): ?>
+                                    <div class="row list-product">
+                                        <div class="col-12 pb-4">
+                                            <div class="title-cate">
+                                                <a href="{{ url($featureCategories->slug) }}"><span class="bg-category">{{ $featureCategories->name }} <span class="fa fa-forward"></span></span></a>
+                                            </div>
+                                        </div>
+                                        <?php foreach ($productsByCateId as $key => $product): ?>
+                                            <div class="col-md-3">
+                                                <a href="{{ url($product->slug) }}">
+                                                    <img src="{{ !empty($product->image) ? get_object_image($product->image,'medium') : '' }}" alt="{{ $product->name }}" />
+                                                    <div class="text-center">
+                                                        <h3 class="product-name py-3 mb-0">{{ $product->name }}</h3>
+                                                        <p class="product-price">{{ number_format($product->price,0,',','.') }} VND</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        <?php endforeach; ?>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row list-product">
-                            <div class="col-12 pb-4">
-                                <div class="title-cate">
-                                    <span class="bg-category">Rèm vãi <span class="fa fa-forward"></span></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                    <div class="text-center">
-                                        <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                        <p class="product-price">150.000 vnd</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row list-product">
-                            <div class="col-12 pb-4">
-                                <div class="title-cate">
-                                    <span class="bg-category">Rèm vãi <span class="fa fa-forward"></span></span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                </a>
-                                <div class="text-center">
-                                    <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                    <p class="product-price">150.000 vnd</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                </a>
-                                <div class="text-center">
-                                    <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                    <p class="product-price">150.000 vnd</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                </a>
-                                <div class="text-center">
-                                    <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                    <p class="product-price">150.000 vnd</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="{{ Theme::asset()->url('images/rem-vai-15.jpg') }}" alt="rem vai" />
-                                </a>
-                                <div class="text-center">
-                                    <h3 class="product-name py-3 mb-0">Rèm vải RV15</h3>
-                                    <p class="product-price">150.000 vnd</p>
-                                </div>
-                            </div>
-                        </div>
+                                <?php endif; ?>
+                            @endforeach
+                        <?php endif;?>
                     </div>
                 </div>
             </div>

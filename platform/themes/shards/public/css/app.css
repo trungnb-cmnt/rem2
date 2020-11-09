@@ -9392,6 +9392,7 @@ caption {
 
 th {
   text-align: inherit;
+  text-align: -webkit-match-parent;
 }
 
 label {
@@ -13122,6 +13123,8 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
+  -webkit-print-color-adjust: exact;
+          color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -14701,6 +14704,7 @@ a.badge-dark.focus {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
   padding: 0.75rem 1.25rem;
   color: inherit;
 }
@@ -19969,7 +19973,7 @@ a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
 }
 
 .text-reset {
@@ -25491,7 +25495,10 @@ header .header-menu .navbar-light .navbar-nav .nav-link {
 }
 
 header .header-menu .dropdown-menu {
-  width: 600px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 600px;
 }
 
 header .header-menu .dropdown-menu .dropdown-item {
@@ -25535,6 +25542,16 @@ header .m-header-menu .navbar-collapse .navbar-nav * {
 
 header .m-header-menu .navbar-collapse .navbar-nav .active .nav-link {
   color: #ff9314;
+}
+
+header .dropdown-menu ul {
+  padding-left: 0;
+  width: 100%;
+}
+
+header .dropdown-menu ul li {
+  display: inline-block;
+  padding: 7px 25px;
 }
 
 footer {
@@ -25785,6 +25802,9 @@ footer .copyright {
 }
 
 .left-sidebar {
+  margin: 0 10px;
+  min-width: 200px;
+  max-width: 200px;
   background-color: #661d17;
   color: #ffffff;
 }
@@ -25831,10 +25851,11 @@ footer .copyright {
   background-color: #eceff3;
   font-weight: bold;
   display: inline-block;
+  color: #661d17;
 }
 
 .content .list-product .bg-category .fa-forward {
-  color: #212529;
+  color: #661d17;
   padding-left: 5px;
 }
 
@@ -25985,6 +26006,10 @@ footer .copyright {
 
 .catalog-product .description * {
   font-family: "Oswald" !important;
+}
+
+.gallery-product {
+  display: grid !important;
 }
 
 .gallery-product .owl-nav .owl-prev {
@@ -26161,8 +26186,8 @@ div.image a {
   top: 0;
 }
 
-div.image.large-image {
-  padding-bottom: 64%;
+div.image.medium-image {
+  padding-bottom: 100%;
 }
 
 .cl-default {

@@ -48,7 +48,8 @@ header {
             }
         }
         .dropdown-menu {
-            width: 600px;
+            width: max-content;
+            max-width: 600px;
             .dropdown-item {
                 display: inline-block;
                 padding: 7px 25px;
@@ -85,6 +86,16 @@ header {
                 .active .nav-link {
                     color: $primary-color;
                 }
+            }
+        }
+    }
+    .dropdown-menu {
+        ul {
+            padding-left: 0;
+            width: 100%;
+            li {
+                display: inline-block;
+                padding: 7px 25px;
             }
         }
     }

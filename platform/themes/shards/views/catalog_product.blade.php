@@ -2,18 +2,17 @@
     <?php $NameCate = get_catalog_category_by_id($product->primary_category_id); ?>
     <div class="container">
         <div class="row py-5">
-            <div class="col-2 d-none d-lg-block">
+            <div class="d-none d-lg-block">
                 {!! Theme::partial('sidebar') !!}
             </div>
-            <div class="col-12 col-lg-10">
+            <div class="col">
                 <div class="row">
-                    <div class="col-md-5 offset-md-1">
-                        <div class="px-3 pb-4 text-center">
+                    <div class="col-md-6">
+                        <div class="pb-4 text-center">
                             <div class="cursor-pointer d-none d-md-block">
                                 <img id="Img-product" class="position-relative"
-                                    src="{{ !empty($product->image) ? get_object_image($product->image,'large3') : '' }}"
-                                    alt="{{ $product->name }}"
-                                    data-zoom-image="{{ !empty($product->image) ? $product->image : '' }}">
+                                    src="{{ !empty($product->image) ? get_object_image($product->image,'medium') : '' }}"
+                                    alt="{{ $product->name }}">
                             </div>
                         </div>
                         @if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries =
@@ -23,7 +22,7 @@
                             @foreach ($galleries as $image)
                             <div class="item-imgGall">
                                 <img src="{{ get_object_image(Arr::get($image, 'img'), 'large3') }}"
-                                    name-img="{{ get_object_image(Arr::get($image, 'img'), 'large3') }}"
+                                    name-img="{{ get_object_image(Arr::get($image, 'img'), 'medium') }}"
                                     alt="{{ $product->name }}">
                             </div>
                             @endforeach

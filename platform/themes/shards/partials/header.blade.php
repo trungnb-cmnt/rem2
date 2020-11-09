@@ -45,40 +45,14 @@
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav w-100 d-flex align-items-center justify-content-center">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Trang Chủ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Giới Thiệu</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Danh Mục
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Rèm vải</a>
-                                        <a class="dropdown-item" href="#">Rèm tâm cổ điển</a>
-                                        <a class="dropdown-item" href="#">Rèm sáo gỗ</a>
-                                        <a class="dropdown-item" href="#">Rèm sáo gỗ</a>
-                                        <a class="dropdown-item" href="#">Rèm cầu vồng</a>
-                                        <a class="dropdown-item" href="#">Rèm cửa sổ</a>
-                                        <a class="dropdown-item" href="#">Rèm cửa sổ</a>
-                                        <a class="dropdown-item" href="#">Rèm cửa sổ</a>
-                                        <a class="dropdown-item" href="#">Rèm cửa sổ</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Dự Án</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Tư Vấn</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Liên Hệ</a>
-                                </li>
-                            </ul>
+                             <div class="collapse navbar-collapse" id="main-menu">
+                                {!!
+                                Menu::renderMenuLocation('main-menu', [
+                                'theme' => true,
+                                'view' => 'menus.main-menu',
+                                ])
+                                !!}
+                            </div>
                         </div>
                     </nav>
                 </div>

@@ -3,7 +3,7 @@
 return [
     'max_quota'               => env('RV_MEDIA_MAX_QUOTA', 1024 * 1024 * 1024),
     'sizes'                   => [
-        'medium'   => '540x360',
+        'medium'   => '540x540',
         'large2'   => '1920x700',
         'large3'   => '1000x640',
         'large4'   => '1900x1216',
