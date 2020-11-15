@@ -33,6 +33,7 @@
                         <div>
                             <h2 class="mb-4 text-uppercase prod-title">{{ $product->name }}</h2>
                             <div class="description">
+                                <p class="product-price font-weight-bold">{{ number_format($product->price,0,',','.') }} VND/m2</p>
                                 {!! $product->description !!}
                             </div>
                         </div>

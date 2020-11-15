@@ -22102,21 +22102,15 @@ $(document).ready(function () {
     var scrollPosition = Math.round(window.scrollY); // If we've scrolled 100px, add "sticky" class to the header
 
     if (scrollPosition > 1) {
-      $("#header .logo").css({
-        "min-width": "unset"
-      });
+      // $("#header .logo").css({ "min-width": "unset" });
       $("#stick-nav").css({
         padding: "6px 0"
-      });
-      $("#header-logo").css({
-        width: "135px"
-      });
+      }); // $("#header-logo").css({ width: "135px" });
     } // If not, remove "sticky" class from header
     else {
         $("#stick-nav").css({
           padding: "15px 0"
-        });
-        $("#header-logo").css("width", "unset");
+        }); // $("#header-logo").css("width", "unset");
       }
   }, 300); // Run the checkHeader function every time you scroll
 
@@ -22197,9 +22191,6 @@ $(document).ready(function () {
   $containers.scrollAnimations();
 });
 $(document).ready(function () {
-  $("#imageZoom").imageZoom({
-    zoom: 200
-  });
   $(".btn-submit").on("click", function () {
     var elements = document.getElementsByClassName("inputValidate");
 

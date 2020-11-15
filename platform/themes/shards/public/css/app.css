@@ -25554,6 +25554,14 @@ header .dropdown-menu ul li {
   padding: 7px 25px;
 }
 
+header #header-logo {
+  width: 218px;
+}
+
+header #mb-header-logo {
+  width: 125px;
+}
+
 footer {
   color: #ffffff;
   background-color: #282840;
@@ -25647,6 +25655,10 @@ footer ul li {
 
 footer .copyright {
   background-color: #661d17;
+}
+
+footer #footer-logo {
+  width: 235px;
 }
 
 .blog-category hr {
@@ -25774,7 +25786,7 @@ footer .copyright {
 }
 
 #banner .carousel-inner .carousel-item {
-  height: 460px;
+  height: 450px;
   width: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -25816,6 +25828,8 @@ footer .copyright {
 
 .left-sidebar .category h2 {
   font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .left-sidebar .list-category a {
@@ -25830,6 +25844,10 @@ footer .copyright {
 .left-sidebar .list-category a:hover {
   background-color: #ff9314;
   color: #ffffff;
+}
+
+.left-sidebar .list-category.active {
+  color: #ff9314;
 }
 
 .product-name {
@@ -26208,17 +26226,37 @@ img {
 }
 
 .pb-40 {
-  padding-bottom: 40px;
+  padding-bottom: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .pb-40 {
+    padding-bottom: 40px;
+  }
 }
 
 .py-50 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+@media only screen and (min-width: 768px) {
+  .py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .py-70 {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+@media only screen and (min-width: 768px) {
+  .py-70 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 .title {

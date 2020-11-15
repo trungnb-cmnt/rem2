@@ -1,4 +1,4 @@
-<ul class="navbar-nav w-100 d-flex align-items-center justify-content-center">
+<ul class="navbar-nav w-100 d-block px-4 py-2 p-lg-0 d-lg-flex align-items-center justify-content-center">
     @foreach ($menu_nodes as $key => $row)
         <?php if ($row->hasChild()) : ?>
             <li class="nav-item dropdown">

@@ -1,31 +1,39 @@
 <?php 
     $featureCategories = get_featured_catalog_categories(6);
+    
+    $banners = theme_option('Banner');
+    if (!empty($banners)) {
+        $banner_web_images = gallery_meta_data($banners, 'gallery');
+    }
 ?>
 <section>
-    <div id="banner" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#banner" data-slide-to="0" class="active"></li>
-            <li data-target="#banner" data-slide-to="1"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item active"
-                style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+    <?php if (!empty($banner_web_images)) : ?>
+        <div id="banner" class="carousel slide" data-ride="carousel">
+           <ol class="carousel-indicators">
+                @foreach($banner_web_images as $key => $banner)
+                <li data-target="#banner" data-slide-to="<?php echo $key ?>"
+                    class="<?php if ($key == 0) echo 'active'; ?>"></li>
+                @endforeach
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                @foreach($banner_web_images as $key => $banner)
+                <?php $url = Arr::get($banner, 'img'); ?>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item <?php if ($key == 0) echo 'active' ?>"
+                    style="background-image: url(<?php echo $url?>)">
+                </div>
+                @endforeach
             </div>
-            <!-- Slide Three - Set the background image for this slide in the line below -->
-            <div class="carousel-item"
-                style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
-            </div>
+            <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
+    <?php endif;?>
 </section>
 <section>
     <div class="container">
@@ -38,11 +46,8 @@
                     <div class="col-12 d-flex flex-column align-items-center">
                         <h2 class="mb-3">Sản phẩm của chúng tôi</h2>
                         <p class="text-center">Các sản phẩm của chúng tôi đều ược nhập khẩu chính hãng, có giấy chứng
-                            nhận hợp quy của cơ
-                            quan chức
-                            năng. Sử dụng ván sàn Duy Khươngr mang tới cho bạn một không gian thật sự thoải mái và sang
-                            trọng,
-                            thân thiện với môi trường, gần gũi hơn với thiên nhiên với các gam màu vân gỗ tự nhiên.</p>
+                            nhận hợp quy của cơ quan chức năng. Sử dụng rèm cửa Minh Phương mang tới cho bạn một không gian thật sự thoải mái và sang
+                            trọng, thân thiện với môi trường, gần gũi hơn với thiên nhiên với các gam màu tự nhiên.</p>
                         <div class="line-icon mt-4"> <span class="icon-icon-3color"><span class="path1"></span><span
                                     class="path2"></span><span class="path3"></span></span></div>
                     </div>
@@ -58,7 +63,7 @@
                                             </div>
                                         </div>
                                         <?php foreach ($productsByCateId as $key => $product): ?>
-                                            <div class="col-md-3">
+                                            <div class="col-6 col-md-3">
                                                 <a href="{{ url($product->slug) }}">
                                                     <img src="{{ !empty($product->image) ? get_object_image($product->image,'medium') : '' }}" alt="{{ $product->name }}" />
                                                     <div class="text-center">
@@ -92,7 +97,7 @@
                         </div>
                         <div class="pl-3">
                             <p class="reason">Giá thành phải chăng</p>
-                            Một trong những ưu điểm vượt trội của sàn gỗ Duy Khương đó chính là giá cả phải chăng của
+                            Một trong những ưu điểm vượt trội của rèm cửa Minh Phương đó chính là giá cả phải chăng của
                             các sản phẩm...
                         </div>
                     </div>
@@ -104,8 +109,7 @@
                         </div>
                         <div class="pl-3">
                             <p class="reason">Chất lượng tuyệt mỹ</p>
-                            Một trong những ưu điểm vượt trội của sàn gỗ Duy Khương đó chính là giá cả phải chăng của
-                            các sản phẩm...
+                            Tuy có giá thành tương đối thấp so với sàn gỗ khác, nhưng các sản phẩm rèm cửa Minh Phương vẫn đảm bảo chất lượng ưu việt cho người sử dung.
                         </div>
                     </div>
                 </div>
@@ -117,8 +121,7 @@
                         </div>
                         <div class="pl-3">
                             <p class="reason">Tính thẩm mỹ cao</p>
-                            Một trong những ưu điểm vượt trội của sàn gỗ Duy Khương đó chính là giá cả phải chăng của
-                            các sản phẩm...
+                            Rèm cửa Minh Phương không chỉ có tính đa dạng về mẫu mã mà còn có tính thẩm mỹ cao nên dễ dàng được khách hàng ưu chuộng.
                         </div>
                     </div>
                 </div>
@@ -129,8 +132,7 @@
                         </div>
                         <div class="pl-3">
                             <p class="reason">Thi công dễ dàng</p>
-                            Một trong những ưu điểm vượt trội của sàn gỗ Duy Khương đó chính là giá cả phải chăng của
-                            các sản phẩm...
+                           Thời gian thi công rèm cửa Minh Phương chỉ bằng một nửa hay một phần 3 so với thi công khác.
                         </div>
                     </div>
                 </div>
@@ -141,8 +143,7 @@
                         </div>
                         <div class="pl-3">
                             <p class="reason">Bảo vệ môi trường</p>
-                            Một trong những ưu điểm vượt trội của sàn gỗ Duy Khương đó chính là giá cả phải chăng của
-                            các sản phẩm...
+                            Rèm cửa Minh Phương được chế tạo từ những nguyên liệu không gây ảnh hưởng đến tài nguyên và môi trường.
                         </div>
                     </div>
                 </div>
@@ -153,8 +154,7 @@
                         </div>
                         <div class="pl-3">
                             <p class="reason">Nguồn hàng dồi dào</p>
-                            Một trong những ưu điểm vượt trội của sàn gỗ Duy Khương đó chính là giá cả phải chăng của
-                            các sản phẩm...
+                           Các dòng sản phẩm Rèm cửa Minh Phương đa dạng về mẫu  mã, chủng loại, phù hợp với nhiều đối tượng tiêu dùng khác nhau.
                         </div>
                     </div>
                 </div>

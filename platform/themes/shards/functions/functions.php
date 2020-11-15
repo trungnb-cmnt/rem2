@@ -211,13 +211,27 @@ theme_option()
         'id' => 'Office-Phone',
         'section_id' => 'opt-text-subsection-general',
         'type' => 'text', // text, password, email, number
-        'label' => __('Office Phone'),
+        'label' => __('Điện thoại'),
         'attributes' => [
-            'name' => 'Office-Phone',
+            'name' => 'phone',
             'value' => null,
             'options' => [
                 'class' => 'form-control',
-                'placeholder' => __('Enter Office Phone'),
+                'placeholder' => __('Số điện thoại'),
+            ]
+        ],
+    ])
+    ->setField([
+        'id' => 'cskh',
+        'section_id' => 'opt-text-subsection-general',
+        'type' => 'text', // text, password, email, number
+        'label' => __('Điện thoại CSKH'),
+        'attributes' => [
+            'name' => 'cskh',
+            'value' => null,
+            'options' => [
+                'class' => 'form-control',
+                'placeholder' => __('Số điện thoại CSKH'),
             ]
         ],
     ])

@@ -6,7 +6,9 @@
                     <div class="col-12 px-4">
                         <div class="row welcome pt-4 pb-5">
                             <div class="col-md-4 pt-2 pb-4 pb-md-0 d-flex align-items-center justify-content-center">
-                                <img src="{{ Theme::asset()->url('images/logo_footer.png') }}" alt="Logo footer">
+                                <a href="/">
+                                    <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo" id="footer-logo">
+                                </a>
                             </div>
                             <div class="col-md-4 pt-2 pb-4 pb-md-0">
                                 <p class="mb-0 footer-title cl-default">RÈM MINH PHƯƠNG</p>
@@ -22,24 +24,35 @@
                                 <p class="mb-0 footer-title">LIÊN HỆ</p>
                                 <div class="pt-3">
                                     <ul class="contact">
-                                        <li>
-                                            <i class="icon-phone font-20"></i>
-                                            <span>Điện Thoại: 036661287</span>
-                                        </li>
-                                        <li>
-                                            <i class="icon-email font-20"></i>
-                                            <span>Email: minhphuong@gmail.com</span>
-                                        </li>
+                                        @if (theme_option('phone'))
+                                            <li>
+                                                <i class="icon-phone font-20"></i>
+                                                <span>Điện Thoại: {{ theme_option('phone') }}</span>
+                                            </li>
+                                        @endif
+                                        @if (theme_option('email'))
+                                            <li>
+                                                <i class="icon-email font-20"></i>
+                                                <span>Email: {{ theme_option('email') }}</span>
+                                            </li>
+                                        @endif
+                                    
                                         <li>
                                             <i class="fas fa-cube font-19 pr-4"></i>
-                                            <span class="pr-3"><i class="fab fa-facebook-square"></i></span>
-                                            <span class="pr-3"><i class="fab fa-youtube"></i></span>
-                                            <span class="pr-3"><i class="fab fa-google-plus-square"></i></span>
+                                            @if(theme_option('facebook'))
+                                                <span class="pr-3"><i class="fab fa-facebook-square"></i></span>
+                                            @endif
+                                             @if(theme_option('zalo'))
+                                                <span><a href="{{ theme_option('zalo') }}"><img src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo" style="width: 40px"/></a></span>
+                                            @endif
+                                            @if(theme_option('gmail'))
+                                                <span><i class="fab fa-google-plus-square"></i></span>
+                                            @endif
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-12 py-4">
+                            <div class="col-12 py-2 py-md-4">
                                 <div class="hr"></div>
                             </div>
                             <div class="col-md-4">
@@ -49,11 +62,9 @@
                                         <li><span class="icon-next pr-2"></span><a href="">Chăm sóc khách hàng - Khiếu
                                                 nại</a>
                                         </li>
-                                        <li><span class="icon-next pr-2"></span><a href="">Chăm sóc khách hàng - Khiếu
-                                                nại</a>
+                                        <li><span class="icon-next pr-2"></span><a href="">Thanh toán và Bảo hành</a>
                                         </li>
-                                        <li><span class="icon-next pr-2"></span><a href="">Chăm sóc khách hàng - Khiếu
-                                                nại</a>
+                                        <li><span class="icon-next pr-2"></span><a href="">Mua bán và Giao nhận</a>
                                         </li>
                                     </ul>
                                 </div>

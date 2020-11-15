@@ -66,17 +66,28 @@ img {
 }
 
 .pb-40 {
-    padding-bottom: 40px;
+    padding-bottom: 25px;
+    @include responsive(md) {
+        padding-bottom: 40px;
+    }
 }
 
 .py-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    @include responsive(md) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .py-70 {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    @include responsive(md) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 }
 
 .title {
