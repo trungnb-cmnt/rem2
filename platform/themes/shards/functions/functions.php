@@ -166,20 +166,6 @@ theme_option()
         ],
     ])
     ->setField([
-        'id' => 'address',
-        'section_id' => 'opt-text-subsection-general',
-        'type' => 'text', // text, password, email, number
-        'label' => __('Address'),
-        'attributes' => [
-            'name' => 'address',
-            'value' => null,
-            'options' => [
-                'class' => 'form-control',
-                'placeholder' => __('Enter Address'),
-            ]
-        ],
-    ])
-    ->setField([
         'id' => 'email',
         'section_id' => 'opt-text-subsection-general',
         'type' => 'text', // text, password, email, number
@@ -193,20 +179,7 @@ theme_option()
             ]
         ],
     ])
-    ->setField([
-        'id' => 'Call-us',
-        'section_id' => 'opt-text-subsection-general',
-        'type' => 'text', // text, password, email, number
-        'label' => __('Call us'),
-        'attributes' => [
-            'name' => 'Call-us',
-            'value' => null,
-            'options' => [
-                'class' => 'form-control',
-                'placeholder' => __('Enter Call us'),
-            ]
-        ],
-    ])
+   
     ->setField([
         'id' => 'Office-Phone',
         'section_id' => 'opt-text-subsection-general',
@@ -232,34 +205,6 @@ theme_option()
             'options' => [
                 'class' => 'form-control',
                 'placeholder' => __('Số điện thoại CSKH'),
-            ]
-        ],
-    ])
-    ->setField([
-        'id' => 'Google-Maps',
-        'section_id' => 'opt-text-subsection-general',
-        'type' => 'text', // text, password, email, number
-        'label' => __('Google Maps'),
-        'attributes' => [
-            'name' => 'Google-Maps',
-            'value' => null,
-            'options' => [
-                'class' => 'form-control',
-                'placeholder' => __('Enter Google Maps'),
-            ]
-        ],
-    ])
-    ->setField([
-        'id' => 'Script-Google-Maps',
-        'section_id' => 'opt-text-subsection-general',
-        'type' => 'textarea', // text, password, email, number
-        'label' => __('Script-google-maps'),
-        'attributes' => [
-            'name' => 'script-maps',
-            'value' => null,
-            'options' => [
-                'class' => 'form-control',
-                'placeholder' => __('Enter Script Google Maps'),
             ]
         ],
     ])
@@ -292,18 +237,19 @@ theme_option()
         ],
     ])
     ->setField([
-        'id' => 'banners_mobi',
+        'id' => 'field_name',
         'section_id' => 'opt-text-subsection-general',
-        'type' => 'select', // select or customSelect
-        'label' => __('Banner_mobi'),
+        'type' => 'editor',
+        'label' => __('Mô tả sản phẩm'),
         'attributes' => [
-            'name' => 'banners_mobi',
-            'data' => $galleries,
-            'value' => ' ', // default value
-            'options' => [
-                'class' => 'form-control',
+            'name' => 'description_product',
+            'value' => null, // Default value
+            'options' => [ // Optional
+                'class' => 'form-control theme-option-textarea',
+                'row' => '10',
             ],
         ],
+        'helper' => __('Helper for this field (optional)'),
     ])
     ->setField([
         'id' => 'description',

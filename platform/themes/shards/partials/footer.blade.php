@@ -40,7 +40,9 @@
                                         <li>
                                             <i class="fas fa-cube font-19 pr-4"></i>
                                             @if(theme_option('facebook'))
-                                                <span class="pr-3"><i class="fab fa-facebook-square"></i></span>
+                                               <a href={{ theme_option('facebook') }} target="__bank">
+                                                    <span class="pr-3"><i class="fab fa-facebook-square"></i></span>
+                                               </a>
                                             @endif
                                              @if(theme_option('zalo'))
                                                 <span><a href="{{ theme_option('zalo') }}"><img src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo" style="width: 40px"/></a></span>

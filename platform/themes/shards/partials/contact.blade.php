@@ -15,51 +15,23 @@
         @endif
         <div class="row">
             <div class="col-md-5 offset-md-1 text-center pb-5 pb-md-0">
-                <?php if (!empty(theme_option('Call-us'))) : ?>
+                <?php if (!empty(theme_option('email'))) : ?>
                 <div class="pb-3">
-                    <h5>Have any questions?</h5>
+                    <h5>Nếu bạn có câu hỏi?</h5>
                     <p class="info pt-1">{{ theme_option('email') }}</p>
                 </div>
                 <?php endif; ?>
-                <?php if (!empty(theme_option('Call-us'))) : ?>
+                <?php if (!empty(theme_option('cskh'))) : ?>
                 <div class="pb-3">
-                    <h5>Call us</h5>
-                    <p class="info pt-1">{{ theme_option('Call-us') }}</p>
-                </div>
-                <?php endif; ?>
-                <?php if (!empty(theme_option('Office-Phone'))) : ?>
-                <div class="pb-3">
-                    <h5>Office Phone</h5>
-                    <p class="info pt-1">{{ theme_option('Office-Phone') }}</p>
+                    <h5>Gọi chúng tôi</h5>
+                    <p class="info pt-1">{{ theme_option('cskh') }}</p>
                 </div>
                 <?php endif; ?>
                 <div class="pb-4">
-                    <p class="word-message">Write a message</p>
-                    <p>If you got any questions, please do not hesitate to send us a message. We reply within 24 hours !
+                    <p class="word-message">Hãy viết 1 tin nhắn</p>
+                    <p>Nếu bạn có bất kỳ câu hỏi nào, vui lòng gửi tin nhắn cho chúng tôi. Chúng tôi trả lời trong vòng 24 giờ! !
                     </p>
-                    <p>Our profiles in social media:</p>
-                </div>
-                <div>
-                    <?php if (!empty(theme_option('Facebook')) && !empty(theme_option('Google'))  && !empty(theme_option('instagram')) && !empty(theme_option('twitter')) && !empty(theme_option('linkedin'))) : ?>
-                    <ul class="footerSocial d-flex">
-                        <?php if (!empty(theme_option('Facebook'))) : ?>
-                        <li class="px-2"><a href="{{ theme_option('Facebook') }}"><i class="icon-facebook"></i></a></li>
-                        <?php endif; ?>
-                        <?php if (!empty(theme_option('Google'))) : ?>
-                        <li class="px-2"><a href="{{ theme_option('Google') }}"><i class="icon-google"></i></a></li>
-                        <?php endif; ?>
-                        <?php if (!empty(theme_option('instagram'))) : ?>
-                        <li class="px-2"><a href="{{ theme_option('instagram') }}"><i class="icon-instagram"></i></a>
-                        </li>
-                        <?php endif; ?>
-                        <?php if (!empty(theme_option('twitter'))) : ?>
-                        <li class="px-2"><a href="{{ theme_option('twitter') }}"><i class="icon-linkedin"></i></a></li>
-                        <?php endif; ?>
-                        <?php if (!empty(theme_option('linkedin'))) : ?>
-                        <li class="px-2"><a href="{{ theme_option('linkedin') }}"><i class="icon-twitter"></i></a></li>
-                        <?php endif; ?>
-                    </ul>
-                    <?php endif; ?>
+                    {{-- <p>Hồ sơ của chúng tôi trên mạng xã hội:</p> --}}
                 </div>
             </div>
             <div class="col-md-5 offset-md-1">
@@ -67,24 +39,24 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <input type="text" class="form-control inputValidate" id="name" name="txtName"
-                            placeholder="Your Name" required>
+                            placeholder="Họ và tên" required>
                     </div>
                     <div class="form-group">
                         <input class="form-control inputValidate" type="text" name="txtPhone" pattern="^[0-9]*$"
-                            placeholder="Your Phone" required>
+                            placeholder="Điện thoại" required>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control inputValidate" id="email" name="txtEmail"
-                            placeholder="Your Email" required>
+                            placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="message" name="txtSubject" placeholder="Subject">
+                        <input type="text" class="form-control" id="message" name="txtSubject" placeholder="Tiêu đề">
                     </div>
                     <div class="form-group">
-                        <textarea name="txtMessage" id="Your Message" rows="4" class="form-control inputValidate"
+                        <textarea name="txtMessage" id="Your Message" rows="4" class="form-control inputValidate" placeholder="Nội dung"
                             required></textarea>
                     </div>
-                    <button type="submit" class="form-control btn-send btn-submit py-2">SEND</button>
+                    <button type="submit" class="form-control btn-send btn-submit py-2">Gửi</button>
                 </form>
             </div>
             <?php if (!empty(theme_option('script-maps'))) : ?>

@@ -69,13 +69,6 @@ class ProductForm extends FormAbstract
                     'data-counter' => 120,
                 ],
             ])
-            ->add('linkBuy', 'text', [
-                'label'      => 'Link Mua Sản Phẩm',
-                'label_attr' => ['class' => 'control-label'],
-                'attr'       => [
-                    'placeholder'  => 'Link Mua Sản Phẩm',
-                ],
-            ])
             ->add('description', 'editor', [
                 'label'      => trans('core/base::forms.description'),
                 'label_attr' => ['class' => 'control-label'],
@@ -102,6 +95,21 @@ class ProductForm extends FormAbstract
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
                 'choices'    => StatusEnum::labels(),
+            ])
+            ->add('code', 'text', [
+                'label'      => 'Mã hàng',
+                'label_attr' => ['class' => 'control-label'],
+                'default_value' => '',
+            ])
+            ->add('origin', 'text', [
+                'label'      => 'Xuất xứ',
+                'label_attr' => ['class' => 'control-label'],
+                'default_value' => '',
+            ])
+            ->add('unit', 'text', [
+                'label'      => 'Đơn vị tính:',
+                'label_attr' => ['class' => 'control-label'],
+                'default_value' => '',
             ])
             ->add('price', 'text', [
                 'label'      => 'Giá',
@@ -137,10 +145,6 @@ class ProductForm extends FormAbstract
             ])
             ->add('image', 'mediaImage', [
                 'label'      => trans('core/base::forms.image'),
-                'label_attr' => ['class' => 'control-label'],
-            ])
-            ->add('image_demo', 'mediaImage', [
-                'label'      =>  'Image Demo',
                 'label_attr' => ['class' => 'control-label'],
             ])
             ->setBreakFieldPoint('status');

@@ -78,6 +78,8 @@ class Product extends Eloquent
         'status',
         'linkBuy',
         'image_demo',
+        'code',
+        'origin',
         'author_id',
         'author_type',
         'publish_date',

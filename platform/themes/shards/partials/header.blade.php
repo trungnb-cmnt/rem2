@@ -7,7 +7,7 @@ $url = Request::url()
             <div class="container">
                 <div class="row d-flex align-items-center justify-content-between py-3">
                     <div class="d-flex align-items-center">
-                        <i class="icon-phone icon-border"></i>
+                        <a href="tel:{{ theme_option('phone') }}"><i class="icon-phone icon-border"></i></a>
                         @if(theme_option('phone'))
                         <a class="pl-4" href="tel:{{ theme_option('phone') }}">
                             <p class="mb-1">Điện thoại</p>
@@ -45,13 +45,13 @@ $url = Request::url()
                             <li>
                                 <i class="fas fa-cube font-19"></i>
                                 @if(theme_option('facebook'))
-                                    <span><i class="fab fa-facebook-square"></i></span>
+                                    <a href="{{ theme_option('facebook') }}" target="__bank"><span><i class="fab fa-facebook-square"></i></span></a>
                                 @endif
                                 @if(theme_option('zalo'))
                                      <span><a href="{{ theme_option('zalo') }}"><img src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo" style="width: 40px"/></a></span>
                                 @endif
-                                @if(theme_option('gmail'))
-                                    <span><i class="fab fa-google-plus-square"></i></span>
+                                @if(theme_option('email'))
+                                    <a href="{{ theme_option('email') }}"><span><i class="fab fa-google-plus-square"></i></span><a>
                                 @endif
                             </li>                   
                         </ul>

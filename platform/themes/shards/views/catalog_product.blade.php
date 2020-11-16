@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="pb-4 text-center">
-                            <div class="cursor-pointer d-none d-md-block">
+                            <div class="cursor-pointer">
                                 <img id="Img-product" class="position-relative"
                                     src="{{ !empty($product->image) ? get_object_image($product->image,'medium') : '' }}"
                                     alt="{{ $product->name }}">
@@ -30,11 +30,25 @@
                         @endif
                     </div>
                     <div class="col-md-6">
-                        <div>
+                        <div class="mb-3">
                             <h2 class="mb-4 text-uppercase prod-title">{{ $product->name }}</h2>
                             <div class="description">
-                                <p class="product-price font-weight-bold">{{ number_format($product->price,0,',','.') }} VND/m2</p>
-                                {!! $product->description !!}
+                                <p class="mb-2">Giá: <span class="product-price font-weight-bold">{{ number_format($product->price,0,',','.') }} VND</span></p>
+                                @if ($product->code)
+                                    <p class="mb-2">Mã hàng: {{ $product->code }}</p>
+                                @endif
+                                @if ($product->origin)
+                                <p class="mb-2">Xuất xứ: {{ $product->origin }}</p>
+                                @endif
+                                @if ($product->unit)
+                                <p class="mb-2">Đơn vị tính: {{ $product->unit }}</p>
+                                @endif
+                                <a href="tel:{{ theme_option('phone') }}">
+                                    <button class="btn-submit">GỌI NGAY</button>
+                                </a>
+                                <div class="description_product mt-3">
+                                    {!! theme_option('description_product') !!}
+                                </div>
                             </div>
                         </div>
                     </div>
