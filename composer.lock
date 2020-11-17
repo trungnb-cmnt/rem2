@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da8f6b40e7b0040a74bc9bf070c22c07",
+    "content-hash": "ca03f603327da6349f9210c6986e02b7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -677,73 +677,6 @@
             "description": "Widget package for Botble CMS application"
         },
         {
-            "name": "bumbummen99/shoppingcart",
-            "version": "2.9.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bumbummen99/LaravelShoppingcart.git",
-                "reference": "08618b40f5003d3ed792cd746c8cc5bf1dec8f99"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bumbummen99/LaravelShoppingcart/zipball/08618b40f5003d3ed792cd746c8cc5bf1dec8f99",
-                "reference": "08618b40f5003d3ed792cd746c8cc5bf1dec8f99",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/events": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0",
-                "illuminate/session": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0",
-                "illuminate/support": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0",
-                "nesbot/carbon": "~1.20||^1.26.3||^2.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^3.4",
-                "phpunit/phpunit": "~5.0||~6.0||~7.0||~8.0"
-            },
-            "suggest": {
-                "gloudemans/notify": "Simple flash notifications for Laravel"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider"
-                    ],
-                    "aliases": {
-                        "Cart": "Gloudemans\\Shoppingcart\\Facades\\Cart"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Gloudemans\\Shoppingcart\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rob Gloudemans",
-                    "email": "info@robgloudemans.nl",
-                    "homepage": "http://robgloudemans.nl/"
-                },
-                {
-                    "name": "Patrick Henninger",
-                    "email": "privat@skyraptor.eu",
-                    "homepage": "https://skyraptor.eu/"
-                }
-            ],
-            "description": "Laravel Shoppingcart",
-            "keywords": [
-                "laravel",
-                "shoppingcart"
-            ],
-            "time": "2020-05-08T19:20:56+00:00"
-        },
-        {
             "name": "chumper/zipper",
             "version": "v1.0.2",
             "source": {
@@ -919,7 +852,7 @@
             "keywords": [
                 "laravel"
             ],
-            "abandoned": true,
+            "abandoned": "diglactic/laravel-breadcrumbs",
             "time": "2019-02-27T13:09:37+00:00"
         },
         {
@@ -1486,6 +1419,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2018-07-12T10:23:15+00:00"
         },
         {
@@ -6162,12 +6096,12 @@
             "version": "v0.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tightenco/ziggy.git",
+                "url": "https://github.com/tighten/ziggy.git",
                 "reference": "aa4c42aaec9516da892bc2e9f6e992582646af77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/ziggy/zipball/aa4c42aaec9516da892bc2e9f6e992582646af77",
+                "url": "https://api.github.com/repos/tighten/ziggy/zipball/aa4c42aaec9516da892bc2e9f6e992582646af77",
                 "reference": "aa4c42aaec9516da892bc2e9f6e992582646af77",
                 "shasum": ""
             },
@@ -7012,6 +6946,73 @@
                 }
             },
             "description": "Dev tools package for Botble CMS application"
+        },
+        {
+            "name": "bumbummen99/shoppingcart",
+            "version": "2.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bumbummen99/LaravelShoppingcart.git",
+                "reference": "08618b40f5003d3ed792cd746c8cc5bf1dec8f99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bumbummen99/LaravelShoppingcart/zipball/08618b40f5003d3ed792cd746c8cc5bf1dec8f99",
+                "reference": "08618b40f5003d3ed792cd746c8cc5bf1dec8f99",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/events": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0",
+                "illuminate/session": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0",
+                "illuminate/support": "5.4.*||5.5.*||5.6.*||5.7.*||5.8.*||^6.0||^7.0",
+                "nesbot/carbon": "~1.20||^1.26.3||^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.4",
+                "phpunit/phpunit": "~5.0||~6.0||~7.0||~8.0"
+            },
+            "suggest": {
+                "gloudemans/notify": "Simple flash notifications for Laravel"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider"
+                    ],
+                    "aliases": {
+                        "Cart": "Gloudemans\\Shoppingcart\\Facades\\Cart"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gloudemans\\Shoppingcart\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Gloudemans",
+                    "email": "info@robgloudemans.nl",
+                    "homepage": "http://robgloudemans.nl/"
+                },
+                {
+                    "name": "Patrick Henninger",
+                    "email": "privat@skyraptor.eu",
+                    "homepage": "https://skyraptor.eu/"
+                }
+            ],
+            "description": "Laravel Shoppingcart",
+            "keywords": [
+                "laravel",
+                "shoppingcart"
+            ],
+            "time": "2020-05-08T19:20:56+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -9931,5 +9932,6 @@
         "ext-json": "*",
         "ext-zip": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
