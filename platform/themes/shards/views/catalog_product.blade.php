@@ -49,9 +49,11 @@ $relatedProduct = get_related_products($product->id,10);
                                 <a href="tel:{{ theme_option('phone') }}">
                                     <button class="btn-submit">GỌI NGAY</button>
                                 </a>
+                                @if (theme_option('description_product'))
                                 <div class="description_product mt-3">
                                     {!! theme_option('description_product') !!}
-                                </div>
+                                </div>    
+                                @endif
                             </div>
                         </div>
                     </div>

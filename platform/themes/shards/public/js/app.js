@@ -22121,11 +22121,11 @@ $(document).ready(function () {
   if ($.fn.owlCarousel) {
     $(".owl-ProdHome").owlCarousel({
       dots: false,
-      // autoplayTimeout: 4000,
+      autoplayTimeout: 4000,
       responsiveClass: true,
       checkVisible: true,
       margin: 30,
-      // loop: true,
+      loop: true,
       responsive: {
         0: {
           items: 1,

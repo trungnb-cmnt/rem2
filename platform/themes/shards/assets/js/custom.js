@@ -8,13 +8,13 @@ $(document).ready(function() {
         function t() {}
 
         function e(t) {
-            return null == t ?
-                t === l ?
-                d :
-                y :
-                I && I in Object(t) ?
-                n(t) :
-                r(t);
+            return null == t
+                ? t === l
+                    ? d
+                    : y
+                : I && I in Object(t)
+                ? n(t)
+                : r(t);
         }
 
         function n(t) {
@@ -96,7 +96,7 @@ $(document).ready(function() {
             return (
                 (e = a(e) || 0),
                 u(n) &&
-                ((T = !!n.leading),
+                    ((T = !!n.leading),
                     (w = "maxWait" in n),
                     (j = w ? M(a(n.maxWait) || 0, e) : j),
                     (S = "trailing" in n ? !!n.trailing : S)),
@@ -112,7 +112,7 @@ $(document).ready(function() {
             if (typeof t != "function") throw new TypeError(b);
             return (
                 u(n) &&
-                ((r = "leading" in n ? !!n.leading : r),
+                    ((r = "leading" in n ? !!n.leading : r),
                     (i = "trailing" in n ? !!n.trailing : i)),
                 o(t, e, { leading: r, maxWait: e, trailing: i })
             );
@@ -141,11 +141,11 @@ $(document).ready(function() {
             if (typeof t != "string") return 0 === t ? t : +t;
             t = t.replace(g, "");
             var n = v.test(t);
-            return n || O.test(t) ?
-                h(t.slice(2), n ? 2 : 8) :
-                j.test(t) ?
-                s :
-                +t;
+            return n || O.test(t)
+                ? h(t.slice(2), n ? 2 : 8)
+                : j.test(t)
+                ? s
+                : +t;
         }
         var l,
             p = "4.17.5",
@@ -160,27 +160,27 @@ $(document).ready(function() {
             O = /^0o[0-7]+$/i,
             h = parseInt,
             x =
-            typeof global == "object" &&
-            global &&
-            global.Object === Object &&
-            global,
+                typeof global == "object" &&
+                global &&
+                global.Object === Object &&
+                global,
             T =
-            typeof self == "object" &&
-            self &&
-            self.Object === Object &&
-            self,
+                typeof self == "object" &&
+                self &&
+                self.Object === Object &&
+                self,
             w = x || T || Function("return this")(),
             S =
-            typeof exports == "object" &&
-            exports &&
-            !exports.nodeType &&
-            exports,
+                typeof exports == "object" &&
+                exports &&
+                !exports.nodeType &&
+                exports,
             N =
-            S &&
-            typeof module == "object" &&
-            module &&
-            !module.nodeType &&
-            module,
+                S &&
+                typeof module == "object" &&
+                module &&
+                !module.nodeType &&
+                module,
             E = Object.prototype,
             $ = E.hasOwnProperty,
             _ = E.toString,
@@ -192,23 +192,23 @@ $(document).ready(function() {
                 return w.Date.now();
             };
         (t.debounce = o),
-        (t.throttle = i),
-        (t.isObject = u),
-        (t.isObjectLike = f),
-        (t.isSymbol = c),
-        (t.now = D),
-        (t.toNumber = a),
-        (t.VERSION = p),
-        typeof define == "function" &&
+            (t.throttle = i),
+            (t.isObject = u),
+            (t.isObjectLike = f),
+            (t.isSymbol = c),
+            (t.now = D),
+            (t.toNumber = a),
+            (t.VERSION = p),
+            typeof define == "function" &&
             typeof define.amd == "object" &&
-            define.amd ?
-            ((w._ = t),
-                define(function() {
-                    return t;
-                })) :
-            N ?
-            (((N.exports = t)._ = t), (S._ = t)) :
-            (w._ = t);
+            define.amd
+                ? ((w._ = t),
+                  define(function() {
+                      return t;
+                  }))
+                : N
+                ? (((N.exports = t)._ = t), (S._ = t))
+                : (w._ = t);
     }.call(this));
 
     // This function will run a throttled script every 300 ms
@@ -235,11 +235,11 @@ $(document).ready(function() {
     if ($.fn.owlCarousel) {
         $(".owl-ProdHome").owlCarousel({
             dots: false,
-            // autoplayTimeout: 4000,
+            autoplayTimeout: 4000,
             responsiveClass: true,
             checkVisible: true,
             margin: 30,
-            // loop: true,
+            loop: true,
             responsive: {
                 0: {
                     items: 1,
