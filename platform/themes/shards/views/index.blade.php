@@ -64,13 +64,15 @@
                                         </div>
                                         <?php foreach ($productsByCateId as $key => $product): ?>
                                             <div class="col-6 col-md-3">
-                                                <a href="{{ url($product->slug) }}">
-                                                    <img src="{{ !empty($product->image) ? get_object_image($product->image,'medium') : '' }}" alt="{{ $product->name }}" />
-                                                    <div class="text-center">
-                                                        <h3 class="product-name py-3 mb-0">{{ $product->name }}</h3>
-                                                        <p class="product-price">{{ number_format($product->price,0,',','.') }} VND</p>
-                                                    </div>
-                                                </a>
+                                                <div class="image medium-image">
+                                                    <a href="{{ url($product->slug) }}">
+                                                      <img src="{{ !empty($product->image) ? get_object_image($product->image,'medium') : '' }}" alt="{{ $product->name }}" />
+                                                    </a>
+                                                </div>
+                                                <div class="text-center">
+                                                    <a href="{{ url($product->slug) }}"><h3 class="product-name py-3 mb-0">{{ $product->name }}</h3></a>
+                                                    <p class="product-price">{{ number_format($product->price,0,',','.') }} VND</p>
+                                                </div>
                                             </div>
                                         <?php endforeach; ?>
                                     </div>

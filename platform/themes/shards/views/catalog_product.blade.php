@@ -1,7 +1,10 @@
+<?php 
+$relatedProduct = get_related_products($product->id,10);
+?>
 <section class="catalog-product">
     <?php $NameCate = get_catalog_category_by_id($product->primary_category_id); ?>
     <div class="container">
-        <div class="row py-5">
+        <div class="row pt-5 pb-3">
             <div class="d-none d-lg-block">
                 {!! Theme::partial('sidebar') !!}
             </div>
@@ -54,7 +57,7 @@
                     </div>
                     <div class="col-12">
                         <div class="content-prod">
-                            <h3 class="py-3">Thông tin chi tiết</h3>
+                            <h3 class="p-3">Thông tin chung</h3>
                             <div class="py-4">
                                 {!! $product->content !!}
                             </div>
@@ -63,15 +66,42 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="content-prod">
-                    <h3 class="py-3">Sản phẩm cùng loại</h3>
-                    <div class="py-4">
-                        {!! $product->content !!}
+        @if (!empty($relatedProduct))
+            <div class="row">
+                <div class="col-12">
+                    <div class="related-product">
+                        <h3 class="pt-4 text-center">Sản phẩm cùng loại</h3>
+                        <div class="py-4">
+                            <div class="owl-carousel owl-theme owl-ProdHome">
+                                @foreach($relatedProduct as $key => $Pro)
+                                <div class="Product-Item">
+                                    <div class="image medium-image">
+                                        <a href="{{ $Pro->slug }}">
+                                            <img src="{{ !empty($Pro->image) ? get_object_image($Pro->image,'medium') : '' }}"
+                                                alt="{{ $Pro->name }}">
+                                        </a>
+                                    </div>
+                                    <div class="DesProHome">
+                                        <p class="NameProHome text-center pt-2">
+                                            <a href="{{ $Pro->slug }}">{{ $Pro->name }}</a>
+                                        </p>
+                                        <hr>
+                                        <p class="PriceProHome">
+                                            <?php if ($Pro->discount_price) : ?>
+                                            <span class="font-18 product-price">$ {{ ($Pro->discount_price) }}</span>
+                                            <del class="font-14"> $ {{ $Pro->price }}</del>
+                                            <?php else : ?>
+                                            <span class="font-18 product-price">$ {{ ($Pro->price) }}</span>
+                                            <?php endif ?>
+                                        </p>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endif
     </div>
 </section>

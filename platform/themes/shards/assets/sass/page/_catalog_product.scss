@@ -41,13 +41,22 @@
         color: #707070;
     }
     .content-prod {
-        border-top: 1px solid #707070;
+        h3 {
+            background-color: #eceff3;
+            color: #ff9314;
+        }
         * {
             font-family: "Oswald" !important;
         }
         img {
             display: block;
             margin: 0 auto;
+        }
+    }
+    .related-product {
+        border-top: 1px solid #cbcbcb;
+        * {
+            font-family: "Oswald" !important;
         }
     }
     .description {
