@@ -55,7 +55,7 @@
                         <?php  if(!empty($featureCategories)): ?>
                             @foreach ($featureCategories as $featureCategories)
                                  <?php $productsByCateId = get_products_by_category($featureCategories->id,0,4); ?>
-                                <?php if(!empty($productsByCateId)): ?>
+                                <?php if(count($productsByCateId) > 0): ?>
                                     <div class="row list-product">
                                         <div class="col-12 pb-4">
                                             <div class="title-cate">

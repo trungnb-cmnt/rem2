@@ -66,7 +66,7 @@ $relatedProduct = get_related_products($product->id,10);
                 </div>
             </div>
         </div>
-        @if (!empty($relatedProduct))
+        @if (count($relatedProduct) > 0)
             <div class="row">
                 <div class="col-12">
                     <div class="related-product">
