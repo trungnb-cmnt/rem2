@@ -36,9 +36,11 @@ $relatedProduct = get_related_products($product->id,10);
                         <div class="mb-3">
                             <h2 class="mb-4 text-uppercase prod-title">{{ $product->name }}</h2>
                             <div class="description">
-                                <p class="mb-2">Giá: <span class="product-price font-weight-bold">{{ number_format($product->price,0,',','.') }} VND</span></p>
+                                <p class="mb-2">Giá: <span
+                                        class="product-price font-weight-bold">{{ number_format($product->price,0,',','.') }}
+                                        VND</span></p>
                                 @if ($product->code)
-                                    <p class="mb-2">Mã hàng: {{ $product->code }}</p>
+                                <p class="mb-2">Mã hàng: {{ $product->code }}</p>
                                 @endif
                                 @if ($product->origin)
                                 <p class="mb-2">Xuất xứ: {{ $product->origin }}</p>
@@ -52,7 +54,7 @@ $relatedProduct = get_related_products($product->id,10);
                                 @if (theme_option('description_product'))
                                 <div class="description_product mt-3">
                                     {!! theme_option('description_product') !!}
-                                </div>    
+                                </div>
                                 @endif
                             </div>
                         </div>
@@ -69,41 +71,41 @@ $relatedProduct = get_related_products($product->id,10);
             </div>
         </div>
         @if (count($relatedProduct) > 0)
-            <div class="row">
-                <div class="col-12">
-                    <div class="related-product">
-                        <h3 class="pt-4 text-center">Sản phẩm cùng loại</h3>
-                        <div class="py-4">
-                            <div class="owl-carousel owl-theme owl-ProdHome">
-                                @foreach($relatedProduct as $key => $Pro)
-                                <div class="Product-Item">
-                                    <div class="image medium-image">
-                                        <a href="{{ $Pro->slug }}">
-                                            <img src="{{ !empty($Pro->image) ? get_object_image($Pro->image,'medium') : '' }}"
-                                                alt="{{ $Pro->name }}">
-                                        </a>
-                                    </div>
-                                    <div class="DesProHome">
-                                        <p class="NameProHome text-center pt-2">
-                                            <a href="{{ $Pro->slug }}">{{ $Pro->name }}</a>
-                                        </p>
-                                        <hr>
-                                        <p class="PriceProHome">
-                                            <?php if ($Pro->discount_price) : ?>
-                                            <span class="font-18 product-price">$ {{ ($Pro->discount_price) }}</span>
-                                            <del class="font-14"> $ {{ $Pro->price }}</del>
-                                            <?php else : ?>
-                                            <span class="font-18 product-price">$ {{ ($Pro->price) }}</span>
-                                            <?php endif ?>
-                                        </p>
-                                    </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="related-product">
+                    <h3 class="pt-4 text-center">Sản phẩm cùng loại</h3>
+                    <div class="py-4">
+                        <div class="owl-carousel owl-theme owl-ProdHome">
+                            @foreach($relatedProduct as $key => $Pro)
+                            <div class="Product-Item">
+                                <div class="image medium-image">
+                                    <a href="{{ $Pro->slug }}">
+                                        <img src="{{ !empty($Pro->image) ? get_object_image($Pro->image,'medium') : '' }}"
+                                            alt="{{ $Pro->name }}">
+                                    </a>
                                 </div>
-                                @endforeach
+                                <div class="DesProHome">
+                                    <p class="NameProHome text-center pt-2">
+                                        <a href="{{ $Pro->slug }}">{{ $Pro->name }}</a>
+                                    </p>
+                                    <hr>
+                                    <p class="PriceProHome">
+                                        <?php if ($Pro->discount_price) : ?>
+                                        <span class="font-18 product-price">$ {{ ($Pro->discount_price) }}</span>
+                                        <del class="font-14"> $ {{ $Pro->price }}</del>
+                                        <?php else : ?>
+                                        <span class="font-18 product-price">$ {{ ($Pro->price) }}</span>
+                                        <?php endif ?>
+                                    </p>
+                                </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         @endif
     </div>
 </section>

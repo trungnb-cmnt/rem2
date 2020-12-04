@@ -5,3 +5,11 @@
 @import "page/post";
 @import "page/catalog_product";
 @import "page/cart";
+.page-section {
+    .content {
+        font-family: "Oswald-Light";
+        img {
+            text-align: center;
+        }
+    }
+}

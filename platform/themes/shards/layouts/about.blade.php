@@ -42,9 +42,7 @@
         </div>
     </div>
     {!! Theme::partial('header') !!}
-
     {!! Theme::content() !!}
-
     {!! Theme::partial('footer') !!}
 
 </body>

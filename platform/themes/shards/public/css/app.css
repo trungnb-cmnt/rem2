@@ -3144,6 +3144,12 @@ body[data-aos-delay="3000"] [data-aos].aos-animate,
   src: local("Oswald-Regular"), local("Oswald"), url(/fonts/Oswald-Regular.ttf?e1996192b98a516646ff9a8c0c0ca90c) format("truetype");
 }
 
+@font-face {
+  font-family: "Oswald-Light";
+  font-display: swap;
+  src: local("Oswald-Light"), local("Oswald-Light"), url(/fonts/Oswald-Light.ttf?58252c8c295695145b458c070ba6ecdb) format("truetype");
+}
+
 /*!
  * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -25494,6 +25500,10 @@ header .header-menu .navbar-light .navbar-nav .nav-link {
   font-family: "Oswald-Bold";
 }
 
+header .header-menu .navbar-light .navbar-nav .nav-link:hover {
+  color: #ff9314;
+}
+
 header .header-menu .dropdown-menu {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -25540,8 +25550,17 @@ header .m-header-menu .navbar-collapse .navbar-nav * {
   color: #ffffff;
 }
 
-header .m-header-menu .navbar-collapse .navbar-nav .active .nav-link {
-  color: #ff9314;
+header .m-header-menu .navbar-collapse .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+header .m-header-menu .dropdown-menu {
+  border: 0;
+  border-radius: 0;
+}
+
+header .m-header-menu .dropdown-menu ul li {
+  color: #212529 !important;
 }
 
 header .dropdown-menu ul {
@@ -25849,6 +25868,12 @@ footer #footer-logo {
   color: #ff9314;
 }
 
+.quotation {
+  margin: 15px 10px;
+  min-width: 200px;
+  max-width: 200px;
+}
+
 .product-name {
   color: #000000;
   font-size: 18px;
@@ -25904,7 +25929,7 @@ footer #footer-logo {
 }
 
 .all-post .bd-item {
-  border-bottom: 1px solid #707070;
+  border-bottom: 1px dashed #707070;
 }
 
 .all-post .post-items .post-title {
@@ -26170,6 +26195,14 @@ footer #footer-logo {
 
 .modal-gallery .slick-slide.is-active img {
   border: 2px solid #f31111;
+}
+
+.page-section .content {
+  font-family: "Oswald-Light";
+}
+
+.page-section .content img {
+  text-align: center;
 }
 
 html {

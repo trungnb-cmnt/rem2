@@ -16,44 +16,48 @@ $url = Request::url()
                         @endif
                     </div>
                     <div>
-                         @if($url == url('/'))
-                            <h1>
-                                <a href="/">
-                                    <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo" id="header-logo">
-                                </a>
-                            </h1>
-                        @else
+                        @if($url == url('/'))
+                        <h1>
                             <a href="/">
                                 <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo" id="header-logo">
                             </a>
+                        </h1>
+                        @else
+                        <a href="/">
+                            <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo" id="header-logo">
+                        </a>
                         @endif
                     </div>
                     <div>
                         <ul class="contact">
                             @if (theme_option('email'))
-                                <li>
-                                    <i class="icon-email font-20"></i>
-                                    <span>Email: {{ theme_option('email') }}</span>
-                                </li>
+                            <li>
+                                <i class="icon-email font-20"></i>
+                                <span>Email: {{ theme_option('email') }}</span>
+                            </li>
                             @endif
                             @if(theme_option('cskh'))
-                                <li>
-                                    <i class="icon-phone font-20"></i>
-                                    <span>CSKH: {{ theme_option('cskh') }}</span>
-                                </li>
+                            <li>
+                                <i class="icon-phone font-20"></i>
+                                <span>CSKH: {{ theme_option('cskh') }}</span>
+                            </li>
                             @endif
                             <li>
                                 <i class="fas fa-cube font-19"></i>
                                 @if(theme_option('facebook'))
-                                    <a href="{{ theme_option('facebook') }}" target="__bank"><span><i class="fab fa-facebook-square"></i></span></a>
+                                <a href="{{ theme_option('facebook') }}" target="__bank"><span><i
+                                            class="fab fa-facebook-square"></i></span></a>
                                 @endif
                                 @if(theme_option('zalo'))
-                                     <span><a href="{{ theme_option('zalo') }}"><img src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo" style="width: 40px"/></a></span>
+                                <span><a href="{{ theme_option('zalo') }}"><img
+                                            src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo"
+                                            style="width: 40px" /></a></span>
                                 @endif
                                 @if(theme_option('email'))
-                                    <a href="{{ theme_option('email') }}"><span><i class="fab fa-google-plus-square"></i></span><a>
-                                @endif
-                            </li>                   
+                                <a href="{{ theme_option('email') }}"><span><i
+                                            class="fab fa-google-plus-square"></i></span><a>
+                                        @endif
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +74,7 @@ $url = Request::url()
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                             <div class="collapse navbar-collapse" id="main-menu">
+                            <div class="collapse navbar-collapse" id="main-menu">
                                 {!!
                                 Menu::renderMenuLocation('main-menu', [
                                 'theme' => true,
@@ -90,7 +94,7 @@ $url = Request::url()
                 <div class="row">
                     <div class="col-12 ">
                         <div class="py-2 font-weight-bold d-flex align-items-center justify-content-center"><i
-                                class="icon-phone font-20 pr-2"></i>Hotline: 1900 1009
+                                class="icon-phone font-20 pr-2"></i>Hotline: {{ theme_option('cskh') }}
                         </div>
                     </div>
                 </div>
@@ -102,15 +106,16 @@ $url = Request::url()
                     <div class="col-12 d-flex align-items-center justify-content-between position-static">
                         <div>
                             @if($url == url('/'))
-                                <h1>
-                                    <a href="/">
-                                        <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo" id="mb-header-logo">
-                                    </a>
-                                </h1>
-                            @else
+                            <h1>
                                 <a href="/">
-                                    <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo" id="mb-header-logo">
+                                    <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo"
+                                        id="mb-header-logo">
                                 </a>
+                            </h1>
+                            @else
+                            <a href="/">
+                                <img src="{{ url(theme_option('logo')) }}" alt="Logo" class="logo" id="mb-header-logo">
+                            </a>
                             @endif
                         </div>
                         <nav class="navbar navbar-expand-lg navbar-light mb-0 position-static">
@@ -120,7 +125,7 @@ $url = Request::url()
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="m-navbarSupportedContent">
-                                 {!!
+                                {!!
                                 Menu::renderMenuLocation('main-menu', [
                                 'theme' => true,
                                 'view' => 'menus.main-menu',

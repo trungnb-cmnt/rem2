@@ -1,27 +1,23 @@
 <section class="all-post">
-    <div class="container-fluid">
-        <div class="row align-items-center justify-content-center">
-            <img src="{{ theme_option('banner-page-news') }}" alt="banner page news">
-        </div>
-    </div>
     <div class="container py-4">
         <div class="row">
-            <div class="col-2 d-none d-lg-block">
+            <div class="py-50 d-none d-lg-block">
                 {!! Theme::partial('sidebar') !!}
             </div>
-            <div class="col-12 col-lg-10 ">
+            @if(!empty($posts))
+            <div class="col py-50 content">
                 <?php $num = count($posts); ?>
                 @foreach($posts as $key => $post)
                 <div class="row py-3 <?php if ($key < $num - 1) echo 'bd-item' ?> post-items">
-                    <div class="col-md-5 px-3">
+                    <div class="col-md-4 px-3">
                         <div>
                             <a href="{{ $post->slug }}">
-                                <img src="{{ !empty($post->image) ? get_object_image($post->image, 'medium') : '' }}"
+                                <img src="{{ !empty($post->image) ? get_object_image($post->image, 'small') : '' }}"
                                     alt="{{ $post->name }}">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6 pt-4 pt-md-0">
+                    <div class="col-md-8 pt-4 pt-md-0">
                         <div>
                             <h2 class="post-title"><a href="{{ $post->slug }}">{{ $post->name }}</a></h2>
                             <p class="post-des">{{ $post->description }}</p>
@@ -29,7 +25,7 @@
                         <div class="pt-3">
                             <a href="{{ $post->slug }}">
                                 <i class="icon-news pr-2"></i>
-                                <span>Read more</span>
+                                <span>Xem ngay</span>
                             </a>
                         </div>
                     </div>
@@ -43,6 +39,7 @@
                     </div>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 </section>

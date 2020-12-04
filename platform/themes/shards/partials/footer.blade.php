@@ -25,30 +25,31 @@
                                 <div class="pt-3">
                                     <ul class="contact">
                                         @if (theme_option('phone'))
-                                            <li>
-                                                <i class="icon-phone font-20"></i>
-                                                <span>Điện Thoại: {{ theme_option('phone') }}</span>
-                                            </li>
+                                        <li>
+                                            <i class="icon-phone font-20"></i>
+                                            <span>Điện Thoại: {{ theme_option('phone') }}</span>
+                                        </li>
                                         @endif
                                         @if (theme_option('email'))
-                                            <li>
-                                                <i class="icon-email font-20"></i>
-                                                <span>Email: {{ theme_option('email') }}</span>
-                                            </li>
-                                        @endif
-                                    
                                         <li>
-                                            <i class="fas fa-cube font-19 pr-4"></i>
+                                            <i class="icon-email font-20"></i>
+                                            <span>Email: {{ theme_option('email') }}</span>
+                                        </li>
+                                        @endif
+                                        <li>
+                                            <i class="fas fa-cube font-19 pr-2"></i>
                                             @if(theme_option('facebook'))
-                                               <a href={{ theme_option('facebook') }} target="__bank">
-                                                    <span class="pr-3"><i class="fab fa-facebook-square"></i></span>
-                                               </a>
+                                            <a href={{ theme_option('facebook') }} target="__bank">
+                                                <span class="pr-3"><i class="fab fa-facebook-square"></i></span>
+                                            </a>
                                             @endif
-                                             @if(theme_option('zalo'))
-                                                <span><a href="{{ theme_option('zalo') }}"><img src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo" style="width: 40px"/></a></span>
+                                            @if(theme_option('zalo'))
+                                            <span><a href="{{ theme_option('zalo') }}"><img
+                                                        src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo"
+                                                        style="width: 40px" /></a></span>
                                             @endif
                                             @if(theme_option('gmail'))
-                                                <span><i class="fab fa-google-plus-square"></i></span>
+                                            <span><i class="fab fa-google-plus-square"></i></span>
                                             @endif
                                         </li>
                                     </ul>

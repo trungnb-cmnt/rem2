@@ -44,6 +44,9 @@ header {
                     color: #ffffff;
                     text-transform: uppercase;
                     font-family: "Oswald-Bold";
+                    &:hover {
+                        color: #ff9314;
+                    }
                 }
             }
         }
@@ -83,9 +86,16 @@ header {
                 * {
                     color: #ffffff;
                 }
-                .active .nav-link {
-                    color: $primary-color;
+                .nav-link {
+                    color: #ffffff;
                 }
+            }
+        }
+        .dropdown-menu {
+            border: 0;
+            border-radius: 0;
+            ul li {
+                color: #212529 !important;
             }
         }
     }

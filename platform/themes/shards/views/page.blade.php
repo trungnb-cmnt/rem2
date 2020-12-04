@@ -4,7 +4,20 @@ if (is_plugin_active('about')) {
     $allPost = get_all_post();
 }
 ?>
-<section class="home-section about-page page-section">
+
+<section class="page-section">
+    <?php if($page->name == 'giới thiệu'): ?>
+    <div class="container">
+        <div class="row">
+            <div class="py-50 d-none d-lg-block">
+                {!! Theme::partial('sidebar') !!}
+            </div>
+            <div class="col py-50 content">
+                {!! $page->content !!}
+            </div>
+        </div>
+    </div>
+    <?php else: ?>
     <div class="container-fluid">
         <div class="row align-items-center justify-content-center">
             <img src="{{ theme_option('banner-page-about') }}" alt="banner page about">
@@ -22,4 +35,5 @@ if (is_plugin_active('about')) {
             <?php endif; ?>
         </div>
     </div>
+    <?php endif;?>
 </section>

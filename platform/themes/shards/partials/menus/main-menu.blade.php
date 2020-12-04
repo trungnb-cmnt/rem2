@@ -1,8 +1,8 @@
-<ul class="navbar-nav w-100 d-block px-4 py-2 p-lg-0 d-lg-flex align-items-center justify-content-center">
+<ul class="navbar-nav w-100 d-block py-2 p-lg-0 d-lg-flex align-items-center justify-content-center">
     @foreach ($menu_nodes as $key => $row)
         <?php if ($row->hasChild()) : ?>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle text-uppercase px-4" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ $row->getRelated()->name }}
                 </a>
@@ -14,8 +14,8 @@
                 </div>
             </li>
         <?php else: ?>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ $row->getRelated()->url }}">{{ $row->getRelated()->name }}</a>
+        <li class="nav-item ">
+            <a class="nav-link text-uppercase px-4" href="{{ $row->getRelated()->url }}">{{ $row->getRelated()->name }}</a>
         </li>
         <?php endif;?>
     @endforeach

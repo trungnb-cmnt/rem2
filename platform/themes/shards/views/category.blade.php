@@ -45,10 +45,14 @@
                                         <hr>
                                         <div class="PriceProHome">
                                             <?php if ($product->discount_price) : ?>
-                                            <span class="font-18">{{ number_format($product->discount_price,0,',','.') }} VND</span>
-                                            <del class="font-14">{{ number_format($product->price,0,',','.') }} VND</del>
+                                            <span
+                                                class="font-18">{{ number_format($product->discount_price,0,',','.') }}
+                                                VND</span>
+                                            <del class="font-14">{{ number_format($product->price,0,',','.') }}
+                                                VND</del>
                                             <?php else : ?>
-                                            <span class="font-18">{{ number_format($product->price,0,',','.') }} VND</span>
+                                            <span class="font-18">{{ number_format($product->price,0,',','.') }}
+                                                VND</span>
                                             <?php endif ?>
                                         </div>
                                     </div>
