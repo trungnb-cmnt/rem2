@@ -75,7 +75,7 @@
                         </div>
                         <div class="col-12">
                             <i>Nếu quý vị đang có nhu cầu lắp đặt rèm cuốn cho gia đình, văn phòng mình, hãy liên hệ
-                                hotline <a href="tel:1900 100" style="color: #fcaf17">0986. 496.912</a> của chúng tôi để
+                                hotline <a href="tel:1900 100" style="color: #fcaf17">097 2222 614</a> của chúng tôi để
                                 được xem mẫu ngay tại
                                 nhà, đo đạc tư vấn miễn
                                 phí, thi công nhanh nhất tại Hà Nội.</i>
