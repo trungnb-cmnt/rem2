@@ -111,10 +111,10 @@
         </div>
     </div>
 
-    <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
+    <!-- <div class="zalo-chat-widget" data-oaid="4265800127607142911" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
         data-autopopup="0" data-width="350" data-height="420"></div>
 
-    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script> -->
 </footer>
 
 <script type="text/javascript" src="{{ asset('/themes/' . Theme::getThemeName() . '/js/app.js?v=1.2') }}"></script>

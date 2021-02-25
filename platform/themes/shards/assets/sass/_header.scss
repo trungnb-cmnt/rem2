@@ -61,8 +61,7 @@ header {
         }
     }
     .m-header-top {
-        background-color: #661d17;
-        color: #ffffff;
+        color: #000000;
         i:before {
             color: $primary-color;
         }
@@ -94,6 +93,7 @@ header {
         .dropdown-menu {
             border: 0;
             border-radius: 0;
+            background-color: #92362e;
             ul li {
                 color: #212529 !important;
             }
