@@ -39,7 +39,7 @@
                                         <li>
                                             <i class="fas fa-cube font-19 pr-2"></i>
                                             @if(theme_option('facebook'))
-                                            <a href={{ theme_option('facebook') }} target="__bank">
+                                            <a href="{{ theme_option('facebook') }}" target="__bank">
                                                 <span class="pr-3"><i class="fab fa-facebook-square"></i></span>
                                             </a>
                                             @endif
@@ -49,7 +49,12 @@
                                                         class="zalo-header" /></a></span>
                                             @endif
                                             @if(theme_option('gmail'))
-                                            <span><i class="fab fa-google-plus-square"></i></span>
+                                            <span>
+                                                <a href="mailto: {{ theme_option('gmail') }}" target="__bank">
+                                                    <span class="pr-3"><i
+                                                            class="fab fa-google-plus-square"></i></i></span>
+                                                </a>
+                                            </span>
                                             @endif
                                         </li>
                                     </ul>

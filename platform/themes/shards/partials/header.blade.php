@@ -10,8 +10,8 @@ $url = Request::url()
                         <a href="tel:{{ theme_option('phone') }}"><i class="icon-phone icon-border"></i></a>
                         @if(theme_option('phone'))
                         <a class="pl-4" href="tel:{{ theme_option('phone') }}">
-                            <p class="mb-1">Điện thoại</p>
-                            <strong>{{ theme_option('phone') }}</strong>
+                            <p class="mb-0">Điện thoại: </p>
+                            <strong><a href="tel:{{ theme_option('phone') }}">{{ theme_option('phone') }}</a></strong>
                         </a>
                         @endif
                     </div>
@@ -54,7 +54,7 @@ $url = Request::url()
                                             alt="Zalo"></a></span>
                                 @endif
                                 @if(theme_option('email'))
-                                <a href="{{ theme_option('email') }}"><span><i
+                                <a href="mailto:{{ theme_option('email') }}"><span><i
                                             class="fab fa-google-plus-square"></i></span><a>
                                         @endif
                             </li>
@@ -94,7 +94,8 @@ $url = Request::url()
                 <div class="row">
                     <div class="col-12 ">
                         <div class="py-2 font-weight-bold d-flex align-items-center justify-content-center"><i
-                                class="icon-phone font-20 pr-2"></i>Hotline: {{ theme_option('cskh') }}
+                                class="icon-phone font-20 pr-2"></i>Hotline: <a
+                                href="tel:{{ theme_option('cskh') }}">{{ theme_option('cskh') }}</a>
                         </div>
                     </div>
                 </div>
