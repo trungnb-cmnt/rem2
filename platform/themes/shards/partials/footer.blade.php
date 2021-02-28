@@ -67,12 +67,12 @@
                                 <p class="mb-0 footer-title">ĐIỀU KHOẢN CHÍNH SÁCH</p>
                                 <div class="pt-3">
                                     <ul>
-                                        <li><span class="icon-next pr-2"></span><a href="">Chăm sóc khách hàng - Khiếu
+                                        <li><span class="icon-next pr-2"></span><a href="/">Chăm sóc khách hàng - Khiếu
                                                 nại</a>
                                         </li>
-                                        <li><span class="icon-next pr-2"></span><a href="">Thanh toán và Bảo hành</a>
+                                        <li><span class="icon-next pr-2"></span><a href="/">Thanh toán và Bảo hành</a>
                                         </li>
-                                        <li><span class="icon-next pr-2"></span><a href="">Mua bán và Giao nhận</a>
+                                        <li><span class="icon-next pr-2"></span><a href="/">Mua bán và Giao nhận</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -81,24 +81,17 @@
                                 <p class="mb-0 footer-title">VỀ CHÚNG TÔI</p>
                                 <div class="pt-3">
                                     <ul>
-                                        <li><span class="icon-next pr-2"></span><a href="">Giới thiệu</a>
+                                        <li><span class="icon-next pr-2"></span><a href="/gioi-thieu">Giới thiệu</a>
                                         </li>
-                                        <li><span class="icon-next pr-2"></span><a href="">Sản phẩm</a>
+                                        <li><span class="icon-next pr-2"></span><a href="/du-an">Dự án</a>
                                         </li>
-                                        <li><span class="icon-next pr-2"></span><a href="">Dự án</a>
-                                        </li>
-                                        <li><span class="icon-next pr-2"></span><a href="">Dịch vụ</a>
+                                        <li><span class="icon-next pr-2"></span><a href="/tu-van">Tư vấn</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div id="fb-root"></div>
-                                <script async defer crossorigin="anonymous"
-                                    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v8.0&appId=858378181289123&autoLogAppEvents=1"
-                                    nonce="i9ygNcSK"></script>
-                                <div class="fb-page" data-href="https://www.facebook.com/facebook" data-width="380"
-                                    data-hide-cover="false" data-show-facepile="false"></div>
+                                {!! theme_option('facebook-page') !!}
                             </div>
                         </div>
                     </div>

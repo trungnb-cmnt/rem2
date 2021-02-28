@@ -104,6 +104,20 @@ theme_option()
             ]
         ],
     ])
+     ->setField([
+        'id' => 'facebook-page',
+        'section_id' => 'socal_network',
+        'type' => 'editor', // text, password, email, number
+        'label' => __('Trang Facebook'),
+        'attributes' => [
+            'name' => 'facebook-page',
+            'value' => null,
+            'options' => [
+                'class' => 'form-control',
+                'placeholder' => __('Enter mã nhúng trang facebook'),
+            ]
+        ],
+    ])
     ->setSection([
         'title' => __('Banner of pages'),
         'desc' => __('Banner của các trang'),
