@@ -46,7 +46,7 @@
                                             @if(theme_option('zalo'))
                                             <span><a href="{{ theme_option('zalo') }}"><img
                                                         src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo"
-                                                        style="width: 40px" /></a></span>
+                                                        class="zalo-header" /></a></span>
                                             @endif
                                             @if(theme_option('gmail'))
                                             <span><i class="fab fa-google-plus-square"></i></span>

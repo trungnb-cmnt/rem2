@@ -50,8 +50,8 @@ $url = Request::url()
                                 @endif
                                 @if(theme_option('zalo'))
                                 <span><a href="{{ theme_option('zalo') }}"><img
-                                            src="{{ Theme::asset()->url('images/zalo.png') }}" alt="Zalo"
-                                            style="width: 40px" /></a></span>
+                                            src="{{ Theme::asset()->url('images/zalo.png') }}" class="zalo-header"
+                                            alt="Zalo"></a></span>
                                 @endif
                                 @if(theme_option('email'))
                                 <a href="{{ theme_option('email') }}"><span><i
