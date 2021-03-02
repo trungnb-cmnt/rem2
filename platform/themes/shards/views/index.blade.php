@@ -77,7 +77,13 @@
                                     <a href="{{ url($product->slug) }}">
                                         <h3 class="product-name py-3 mb-0">{{ $product->name }}</h3>
                                     </a>
+                                    @if($product->price > 0)
                                     <p class="product-price">{{ number_format($product->price,0,',','.') }} VND</p>
+                                    @else
+                                    <a href="tel:{{ theme_option('phone') }}" class="product-price">
+                                        Liên hệ
+                                    </a>
+                                    @endif
                                 </div>
                             </div>
                             <?php endforeach; ?>
