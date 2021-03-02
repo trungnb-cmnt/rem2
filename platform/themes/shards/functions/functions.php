@@ -294,6 +294,26 @@ theme_option()
             ]
         ],
         'helper' => __('Copyright on footer of site'),
+    ])
+    ->setSection([
+        'title' => __('Scripts'),
+        'desc' => __('Scripts'),
+        'id' => 'opt-text-subsection-script',
+        'subsection' => true,
+        'icon' => 'fa fa-home',
+    ])
+    ->setField([
+        'id' => 'google_analytic_script',
+        'section_id' => 'opt-text-subsection-script',
+        'type' => 'textarea',
+        'label' => __('Google Analytic Script'),
+        'attributes' => [
+            'name' => 'google_analytic_script',
+            'value' => '',
+            'options' => [
+                'class' => 'form-control'
+            ]
+        ]
     ]);
 
 function local_business()

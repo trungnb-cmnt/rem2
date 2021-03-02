@@ -38,6 +38,10 @@
     <?php include(public_path() . '/themes/'. Theme::getThemeName() . '/css/app.css');
     ?>
     </style>
+    @if(theme_option('google_analytic_script'))
+    {!! theme_option('google_analytic_script') !!}
+    @endif
+
 </head>
 
 <body class="@if (Request::url() == url('/')) homepage @endif">
