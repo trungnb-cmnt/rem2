@@ -25,7 +25,14 @@
     {!! local_business() !!}
     @endif
 
-    {!! Theme::header() !!}
+    @if(Request::url() == url('/'))
+    <meta property="og:image" content="{{ url('themes/shards/images/rem-vai-13.jpg') }}">
+    <meta property="og:description" content="{{ theme_option('seo_description') }}">
+    <meta property="og:url" content="{{ Request::url() }}">
+    <meta property="og:title" content="{{ theme_option('seo_title') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> {!! theme_option('seo_title') !!}</title>
+    @else {!! Theme::header() !!} @endif
     <style>
     <?php include(public_path() . '/themes/'. Theme::getThemeName() . '/css/app.css');
     ?>
