@@ -52,7 +52,15 @@ class CategoryForm extends FormAbstract
                 'attr'       => [
                     'rows'         => 4,
                     'placeholder'  => trans('core/base::forms.description_placeholder'),
-                    'data-counter' => 400,
+                    'data-counter' => 500,
+                ],
+            ])
+            ->add('content', 'editor', [
+                'label'      => 'Nội dung',
+                'label_attr' => ['class' => 'control-label'],
+                'attr'       => [
+                    'rows'         => 4,
+                    'placeholder'  => 'Nội dung danh mục',
                 ],
             ])
             ->add('is_default', 'onOff', [

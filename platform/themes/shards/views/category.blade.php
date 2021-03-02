@@ -69,7 +69,7 @@
                             <div class="category-description">
                                 <h3 class="py-3">Mô Tả</h3>
                                 <div class="py-4">
-                                    {!! $category->description !!}
+                                    {!! $category->content !!}
                                 </div>
                             </div>
                         </div>

@@ -51,7 +51,8 @@ class Category extends Eloquent
         'is_default',
         'status',
         'author_id',
-        'image'
+        'image',
+        'content'
     ];
 
     /**
