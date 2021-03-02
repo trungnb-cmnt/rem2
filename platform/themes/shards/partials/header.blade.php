@@ -44,19 +44,19 @@ $url = Request::url()
                             @endif
                             <li>
                                 <i class="fas fa-cube font-19"></i>
-                                @if(theme_option('facebook'))
+                                @if(!empty(theme_option('facebook')))
                                 <a href="{{ theme_option('facebook') }}" target="__bank"><span><i
                                             class="fab fa-facebook-square"></i></span></a>
                                 @endif
-                                @if(theme_option('zalo'))
+                                @if(!empty(theme_option('zalo')))
                                 <span><a href="{{ theme_option('zalo') }}"><img
                                             src="{{ Theme::asset()->url('images/zalo.png') }}" class="zalo-header"
                                             alt="Zalo"></a></span>
                                 @endif
-                                @if(theme_option('email'))
+                                @if(theme_option('email') != '')
                                 <a href="mailto:{{ theme_option('email') }}"><span><i
-                                            class="fab fa-google-plus-square"></i></span><a>
-                                        @endif
+                                            class="fab fa-google-plus-square"></i></span></a>
+                                @endif
                             </li>
                         </ul>
                     </div>
@@ -94,8 +94,9 @@ $url = Request::url()
                 <div class="row">
                     <div class="col-12 ">
                         <div class="py-2 font-weight-bold d-flex align-items-center justify-content-center"><i
-                                class="icon-phone font-20 pr-2"></i>Hotline: <a
-                                href="tel:{{ theme_option('cskh') }}">{{ theme_option('cskh') }}</a>
+                                class="icon-phone font-20 pr-2"></i>Hotline: @if(!empty(theme_option('cskh')))
+                            <a href="tel:{{ theme_option('cskh') }}">{{ theme_option('cskh') }}</a>
+                            @endif
                         </div>
                     </div>
                 </div>
