@@ -46,13 +46,18 @@
                                         <div class="PriceProHome">
                                             <?php if ($product->discount_price) : ?>
                                             <span
-                                                class="font-18">{{ number_format($product->discount_price,0,',','.') }}
+                                                class="font-18 product-price">{{ number_format($product->discount_price) }}
                                                 VND</span>
-                                            <del class="font-14">{{ number_format($product->price,0,',','.') }}
-                                                VND</del>
+                                            <del class="font-14">{{ number_format($product->price) }} VND</del>
                                             <?php else : ?>
-                                            <span class="font-18">{{ number_format($product->price,0,',','.') }}
+                                            @if($product->price > 0)
+                                            <span class="font-18 product-price">{{ number_format($product->price) }}
                                                 VND</span>
+                                            @else
+                                            <a href="tel:{{ theme_option('phone') }}" class="product-price">
+                                                Liên hệ
+                                            </a>
+                                            @endif
                                             <?php endif ?>
                                         </div>
                                     </div>

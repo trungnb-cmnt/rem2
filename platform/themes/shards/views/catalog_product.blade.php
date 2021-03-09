@@ -92,11 +92,12 @@ $relatedProduct = get_related_products($product->id,10);
                                     <hr>
                                     <p class="PriceProHome">
                                         <?php if ($Pro->discount_price) : ?>
-                                        <span class="font-18 product-price">{{ ($Pro->discount_price) }} VND</span>
-                                        <del class="font-14">{{ $Pro->price }} VND</del>
+                                        <span class="font-18 product-price">{{ number_format($Pro->discount_price) }}
+                                            VND</span>
+                                        <del class="font-14">{{ number_format($Pro->price) }} VND</del>
                                         <?php else : ?>
                                         @if($Pro->price > 0)
-                                        <span class="font-18 product-price">{{ ($Pro->price) }} VND</span>
+                                        <span class="font-18 product-price">{{ number_format($Pro->price) }} VND</span>
                                         @else
                                         <a href="tel:{{ theme_option('phone') }}" class="product-price">
                                             Liên hệ
